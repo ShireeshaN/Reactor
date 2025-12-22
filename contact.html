@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - MinimalFolio Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center position-relative">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img class="logoos" src="assets/img/logoos.png" alt="">
+        <!-- <h1 class="sitename text-white">ARTIEA</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="Product.html">Products</a></li>
+          <!-- <li><a href="p">Portfolio</a></li> -->
+          <li><a href="services.html">Services</a></li>
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+   <style>
+    :root {
+      --text-color: #111;
+      --gray-bg: #f3f6f8;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #fff;
+    }
+
+    section { width: 100%; margin: 0; padding: 0; }
+
+    .container-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* -------- LEFT COLUMN -------- */
+    .left-col {
+      flex: 0 0 38%;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      padding: 100px 80px 100px 120px;
+    }
+
+    .left-col h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .left-col p {
+      font-size: 1.05rem;
+      color: #333;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .left-col a {
+      color: #111;
+      text-decoration: underline;
+    }
+
+    .left-col h2 {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-top: 60px;
+      margin-bottom: 10px;
+    }
+
+    /* -------- RIGHT COLUMN -------- */
+    .right-col {
+      flex: 0 0 62%;
+      background-color: var(--gray-bg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px 120px;
+    }
+
+    .right-col h2 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 35px;
+    }
+
+    label {
+      font-weight: 500;
+      margin-bottom: 6px;
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .form-control,
+    .form-select {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #000;
+      border-radius: 0;
+      padding-left: 0;
+      font-size: 1rem;
+      margin-bottom: 25px;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      box-shadow: none;
+      border-color: #000;
+      background: transparent;
+    }
+
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+
+    .form-check input {
+      margin-top: 4px;
+      width: 18px;
+      height: 18px;
+      border-radius: 0;
+    }
+
+    .form-check label a {
+      color: #111;
+      text-decoration: underline;
+    }
+
+    .btn-submit {
+      background-color: #111;
+      color: #fff;
+      border: none;
+      border-radius: 0;
+      padding: 12px 45px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      margin-top: 30px;
+    }
+
+    .btn-submit:hover { background-color: #333; }
+
+    /* -------- MAP SECTION -------- */
+    .map-section {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+   
+      background-color: #fff;
+      align-items: stretch;
+      margin-top: 0;
+    }
+
+    .map-info {
+      flex: 0 0 38%;
+      padding: 100px 80px 100px 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .map-info h2 {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 35px;
+    }
+
+    .map-info p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .map-info a {
+      color: #111;
+      text-decoration: underline;
+    }
+
+    .map {
+      flex: 0 0 62%;
+      min-height: 750px;
+      background: #111;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: grayscale(100%) invert(90%) contrast(90%);
+    }
+
+    /* -------- RESPONSIVE -------- */
+    @media (max-width: 992px) {
+      .container-flex,
+      .map-section {
+        flex-direction: column;
+      }
+
+      .left-col,
+      .right-col,
+      .map-info,
+      .map {
+        flex: 100%;
+        padding: 60px 40px;
+      }
+    }
+  </style>
+
+<main class="main">
+
+    <!-- CONTACT FORM SECTION -->
+  <section class="container-flex">
+    <div class="left-col">
+      <h1>Contact us</h1>
+      <p>We aim to provide great customer service. Please use our contact form for any product enquiries, sales information or project support.</p>
+      <p>If you want to purchase our products or book a showroom visit, please use our <a href="#">Locator</a> to find the nearest Deltalight authorised partner.</p>
+      <p>Find the latest issue of the Lighting Bible <a href="#">here</a>, as well as various brochures with information on products and their uses.</p>
+
+      <h2>Headquarters</h2>
+      <p class="fw-semibold mb-1">ARTIEA</p>
+      <p>Via Montenapoleone<br> 12 Milano Lombardia <br>20121</p>
+      <p>+32 56 36 16 01<br>info@artiea.it</p>
+    </div>
+
+    <div class="right-col">
+      <h2>Contact Us</h2>
+      <form>
+        <div>
+          <label for="firstName">First name</label>
+          <input type="text" id="firstName" class="form-control" required>
+        </div>
+        <div>
+          <label for="lastName">Last name</label>
+          <input type="text" id="lastName" class="form-control" required>
+        </div>
+        <div>
+          <label for="email">E-mail address</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
+        <div>
+          <label for="phone">Phone (Optional)</label>
+          <input type="tel" id="phone" class="form-control">
+        </div>
+        <div>
+          <label for="role">Role</label>
+          <select id="role" class="form-select" required>
+            <option selected disabled>Select your role</option>
+            <option>Architect</option>
+            <option>Designer</option>
+            <option>Dealer</option>
+            <option>Client</option>
+          </select>
+        </div>
+        <div>
+          <label for="company">Company (Optional)</label>
+          <input type="text" id="company" class="form-control">
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" class="form-control" rows="3"></textarea>
+        </div>
+
+        <!-- New fields -->
+        <div>
+          <label for="zipcode">Zipcode (Optional)</label>
+          <input type="text" id="zipcode" class="form-control">
+        </div>
+        <div>
+          <label for="state">State / Province / Region</label>
+          <input type="text" id="state" class="form-control">
+        </div>
+        <div>
+          <label for="country">Country</label>
+          <select id="country" class="form-select">
+            <option selected disabled>Select your country</option>
+            <option>India</option>
+            <option>Belgium</option>
+            <option>USA</option>
+            <option>UK</option>
+            <option>Germany</option>
+            <option>Australia</option>
+          </select>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="privacyCheck" required>
+          <label for="privacyCheck" class="form-check-label">
+            I have read and agree to the <a href="#">Privacy Policy</a> and consent to the use of my personal data.
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- MAP SECTION -->
+  <section class="map-section">
+    <div class="map-info">
+      <h2>Your nearest office</h2>
+      <p><strong>ARTIEA</strong></p>
+      <p>Block B, Plot No 32 | Sector 85, Noida<br>
+         201301 Gautambuddha Nagar<br>India</p>
+      <p>📞 +91 120-4146144</p>
+      <p>✉️ marketing.india@arcotindia.com</p>
+      <p>🔗 <a href="https://deltalight.com" target="_blank">www.arcotindia.com</a></p>
+    </div>
+
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12370318.242641078!2d2.1272835062355053!3d40.80385719960297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d4fe82448dd203%3A0xe22cf55c24635e6f!2sItaly!5e0!3m2!1sen!2sin!4v1760440561407!5m2!1sen!2sin"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+      
+    </div>
+  </section>
+
+
+
+  </main>
+
+<!-- <section class="footer">
+
+
+<style>
+/* -------------------- Footer Layout -------------------- */
+
+.footer {
+  background: #fff;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  border-top: 1px solid #e8e8e8;
+  padding: 60px 8% 20px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(6, 1fr);
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 50px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.footer-column p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-column p:hover {
+  color: #000;
+}
+
+.footer-info p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.footer-logo {
+  width: 90px;
+  margin-bottom: 15px;
+}
+
+/* -------------------- Bottom Row -------------------- */
+.footer-bottom {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-bottom-left {
+  flex: 1;
+}
+
+.footer-bottom-left .divider {
+  margin: 0 8px;
+  color: #ccc;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-socials a {
+  background: #000;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  background: #ff4500;
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 1200px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  .footer {
+    padding: 40px 6%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+</style>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+
+
+<!-- Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Intersection Observer for scroll fade-in animation
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+
+</html>
