@@ -32,12 +32,12 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center position-relative">
+  <header id="header" class="header d-flex align-items-center ">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img class="logoos" src="assets/img/logoos.png" alt="">
+        <img class="logoos" src="assets/img/logos.png" alt="">
         <!-- <h1 class="sitename text-white">ARTIEA</h1> -->
       </a>
 
@@ -77,7 +77,7 @@
 
 
 <!-- ========================= 3D Carousel Section ========================= -->
-<section id="video-banner" class="video-banner section">
+<!-- <section id="video-banner" class="video-banner section">
   <div class="video-bg">
     <video autoplay muted loop playsinline>
       <source src="assets/media/vedio.mp4" type="video/mp4">
@@ -133,29 +133,122 @@
   .title { font-size: 2rem; }
   .subtitle { font-size: 1rem; }
 }
+</style> -->
+
+<section id="image-banner" class="image-banner">
+
+  <div class="slider">
+    <div class="slides">
+      <div class="slide" style="background-image:url('assets/img/banner1.png')"></div>
+      <!-- <div class="slide" style="background-image:url('assets/img/13.png')"></div>
+      <div class="slide" style="background-image:url('assets/img/Copilot_20251224_104223.png')"></div>
+    </div> -->
+  </div>
+
+  <div class="banner-content">
+    <h1 class="title">GALSS LINE REACTOR</h1>
+  </div>
+
+</section>
+
+<style>
+.image-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.2s ease-in-out;
+}
+.title{
+  color:white;
+  font-size: large;
+
+
+
+    font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  grid-column: span 2;
+font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+ 
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+/* Overlay Text Centered */
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* center horizontally & vertically */
+  z-index: 5;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+/* Mobile */
+@media (max-width:768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
 </style>
 
+<script>
+let index = 0;
+const slides = document.querySelector('.slides');
+const totalSlides = document.querySelectorAll('.slide').length;
+
+setInterval(() => {
+  index = (index + 1) % totalSlides;
+  slides.style.transform = `translateX(-${index * 100}%)`;
+}, 5000);
+</script>
 
 
 
 <!-- abouts start -->
 <section class="whowes-unique">
   <div class="whowes-unique-content">
-    <h1 class="whowes-unique-title">
-      The Vision <br> & <span class="whowes-unique-year">The Drive</span>
-    </h1>
-
-    <div class="whowes-unique-images">
-      <img src="assets/img/fis.png" alt="model" class="whowes-unique-img1">
-      <img src="assets/img/sec.png" alt="model" class="whowes-unique-img2">
+    <!-- Text Left -->
+    <div class="whowes-unique-text">
+      <h1 class="whowes-unique-title">
+        WHO WE<span class="whowes-unique-year"> ARE ?</span>
+      </h1>
+      <!-- <h4>Inspired Illumination for Inspired Living.</h4> -->
+       <p>
+    <strong>Reactor Care</strong> provides high-quality reactors and solutions for the pharmaceutical industry. 
+    We specialize in plant setup, maintenance, and buy-back services, catering to all pharmaceutical process needs with expertise and precision. 
+    Trusted and <strong>ReactorCare Verified</strong>, we ensure reliable performance and compliance.
+  </p>   <a href="about.html" class="whowes-unique-btn">CHECK THIS →</a>
     </div>
 
-    <div class="whowes-unique-text">
-      <h4>Inspired Illumination for Inspired Living.</h4>
-      <p>
-        Artiea brings elegance and innovation to modern living spaces through thoughtfully designed lighting solutions.
-      </p>
-      <a href="about.html" class="whowes-unique-btn">CHECK THIS →</a>
+    <!-- Single Image Right -->
+    <div class="whowes-unique-image">
+      <img src="assets/img/sec3.png" alt="model" class="whowes-unique-img">
     </div>
   </div>
 </section>
@@ -165,64 +258,38 @@
 
 .whowes-unique {
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
-  overflow: hidden;
-  position: relative;
-  padding: 80px 0 160px;
+  background: #fff;
+  padding: 80px 0;
   font-family: "Poppins", sans-serif;
   color: #111;
-}
-
-.whowes-unique::before {
-  content: "";
-  position: absolute;
-  width: 350px;
-  height: 350px;
- background: radial-gradient(circle at center, rgba(169, 169, 172, 0.2), transparent);
-  top: 50px;
-  left: 150px;
-  border-radius: 50%;
-  z-index: 0;
-}
-
-.whowes-unique::after {
-  content: "";
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  background: radial-gradient(circle at center, rgba(169, 169, 172, 0.2), transparent);
-  bottom: 80px;
-  right: 150px;
-  border-radius: 50%;
-  z-index: 0;
+  position: relative;
 }
 
 .whowes-unique-content {
-  max-width: 1100px;
-  width: 90%;
-  position: relative;
-  z-index: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
+  max-width: 1100px;
+  width: 90%;
+  z-index: 2;
+}
+
+.whowes-unique-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .whowes-unique-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 600;
   line-height: 1.1;
-  letter-spacing: -0.5px;
-  grid-column: span 2;
-  opacity: 0;
-  transform: translateY(30px);
-  text-transform: capitalize;
-  color: #000 !important;
-  
+  color: #000;
 }
 
 .whowes-unique-year {
@@ -230,59 +297,26 @@
   color: #666;
 }
 
-.whowes-unique-images {
-  position: relative;
-  opacity: 0;
-  transform: scale(0.9);
-}
-
-.whowes-unique-img1 {
-  width: 220px;
-  border-radius: 8px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  filter: grayscale(100%);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.whowes-unique-img2 {
-  width: 300px;
-  border-radius: 8px;
-  position: relative;
-  top: 100px;
-  left: 120px;
-  filter: grayscale(100%);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.whowes-unique-text {
-  max-width: 400px;
-  opacity: 0;
-  transform: translateY(40px);
-}
-
 .whowes-unique-text h4 {
   font-weight: 500;
-  margin-bottom: 1rem;
   font-size: 1.3rem;
   color: #222;
 }
 
 .whowes-unique-text p {
+  font-size: 1rem;
+  font-weight: 300;
   color: #555;
   line-height: 1.7;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-  font-weight: 300;
 }
 
 .whowes-unique-btn {
   text-decoration: none;
   font-weight: 500;
   color: #111;
-  letter-spacing: 0.5px;
   position: relative;
+  display: inline-block;
+  letter-spacing: 0.5px;
 }
 
 .whowes-unique-btn::after {
@@ -300,39 +334,28 @@
   width: 100%;
 }
 
+.whowes-unique-image {
+  text-align: center;
+}
+
+.whowes-unique-img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile */
 @media (max-width: 900px) {
   .whowes-unique-content {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 2rem;
   }
 
-  .whowes-unique-title {
-    font-size: 2.4rem;
-    grid-column: 1;
-    margin-bottom: 1.5rem;
-  }
-
-  .whowes-unique-images {
-    margin: 2rem auto 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: scale(1);
-  }
-
-  .whowes-unique-img1,
-  .whowes-unique-img2 {
-    position: static;
-    width: 80%;
-    margin: 10px 0;
-  }
-
-  .whowes-unique-text {
-    max-width: 100%;
-    margin: auto;
-    padding: 0 1rem;
-    opacity: 1;
-    transform: none;
+  .whowes-unique-img {
+    max-width: 80%;
+    margin: 0 auto;
   }
 
   .whowes-unique-text h4 {
@@ -340,42 +363,15 @@
   }
 
   .whowes-unique-text p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .whowes-unique-title {
+    font-size: 2.4rem;
   }
 }
 </style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script>
-(function(){
-  gsap.registerPlugin(ScrollTrigger);
-
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".whowes-unique",
-      start: "top 80%"
-    }
-  });
-
-  tl.to(".whowes-unique-title", { opacity: 1, y: 0, duration: 1, ease: "power3.out" })
-    .to(".whowes-unique-images", { opacity: 1, scale: 1, duration: 1.2, ease: "power3.out" }, "-=0.5")
-    .to(".whowes-unique-text", { opacity: 1, y: 0, duration: 1, ease: "power2.out" }, "-=0.6");
-
-  // Additional scroll-triggered fade
-  gsap.from(".whowes-unique-text", {
-    scrollTrigger: {
-      trigger: ".whowes-unique-text",
-      start: "top 85%"
-    },
-    opacity: 0,
-    y: 40,
-    duration: 1.2,
-    ease: "power3.out"
-  });
-})();
-</script>
-<!-- abouts end -->
 
 
 
@@ -392,10 +388,15 @@
 
   <!-- Thumbnails -->
   <div class="herocobs-unique-side" style="position:absolute; top:50%; left:30px; transform:translateY(-50%); display:flex; flex-direction:column; gap:20px; z-index:10;">
-    <img src="assets/img/13.png" data-img="assets/img/13.png" data-text="COBS" data-index="1" style="width:80px; opacity:1; cursor:pointer; transition:all 0.3s ease;">
-    <img src="assets/img/15.png" data-img="assets/img/15.png" data-text="TRACK" data-index="2" style="width:80px; opacity:0.5; cursor:pointer; transition:all 0.3s ease;">
-    <img src="assets/img/17.png" data-img="assets/img/17.png" data-text="LIGHT" data-index="3" style="width:80px; opacity:0.5; cursor:pointer; transition:all 0.3s ease;">
-    <img src="assets/img/18.png" data-img="assets/img/18.png" data-text="COBS" data-index="4" style="width:80px; opacity:0.5; cursor:pointer; transition:all 0.3s ease;">
+    <img src="assets/img/bans.png" data-img="assets/img/bans.png" data-text="REACTOR" data-index="1" style="width:80px; opacity:1; cursor:pointer; transition:all 0.3s ease;">
+    <img src="assets/img/bans.png" data-img="assets/img/bans.png" data-text="REACTOR" data-index="2" style="width:80px; opacity:0.5; cursor:pointer; transition:all 0.3s ease;">
+    <img src="assets/img/bans.png" data-img="assets/img/bans.png" data-text="REACTOR" data-index="3" style="width:80px; opacity:0.5; cursor:pointer; transition:all 0.3s ease;">
+    <img src="assets/img/bans.png" data-img="assets/img/bans.png" data-text="REACTOR" data-index="4" style="width:80px; opacity:0.5; cursor:pointer; transition:all 0.3s ease;">
+   <img src="assets/img/bans.png" data-img="assets/img/bans.png" data-text="REACTOR" data-index="1" style="width:80px; opacity:1; cursor:pointer; transition:all 0.3s ease;">
+    <img src="assets/img/bans.png" data-img="assets/img/bans.png" data-text="REACTOR" data-index="2" style="width:80px; opacity:0.5; cursor:pointer; transition:all 0.3s ease;">
+    <img src="assets/img/bans.png" data-img="assets/img/bans.png" data-text="REACTOR" data-index="3" style="width:80px; opacity:0.5; cursor:pointer; transition:all 0.3s ease;">
+    <img src="assets/img/bans.png" data-img="assets/img/bans.png" data-text="REACTOR" data-index="4" style="width:80px; opacity:0.5; cursor:pointer; transition:all 0.3s ease;">
+
   </div>
 
   <!-- Page index -->
@@ -509,15 +510,20 @@
 
 
 <section class="product-section">
-  <h2 class="product-title">PRODUCTS</h2>
+  <h2 class="product-title">SERVICES</h2>
 
   <!-- Tabs -->
   <div class="product-tabs">
-    <button class="product-tab" data-category="COB">COB</button>
-    <button class="product-tab" data-category="LASERBLADES">LASER BLADES</button>
-    <button class="product-tab" data-category="WALLWASHERS">WALL WASHERS</button>
-    <button class="product-tab" data-category="MAGNETIC">MAGNETIC TRACK</button>
-    <button class="product-tab active" data-category="INDUSTRY">INDUSTRY</button>
+    <button class="product-tab" data-category="COB">REACTOR</button>
+    <button class="product-tab" data-category="LASERBLADES">REACTOR</button>
+    <button class="product-tab" data-category="WALLWASHERS">REACTOR</button>
+    <button class="product-tab" data-category="MAGNETIC">REACTOR</button>
+    <button class="product-tab active" data-category="INDUSTRY">REACTOR</button>
+    <button class="product-tab" data-category="COB">REACTOR</button>
+    <button class="product-tab" data-category="LASERBLADES">REACTOR</button>
+    <button class="product-tab" data-category="WALLWASHERS">REACTOR</button>
+    <button class="product-tab" data-category="MAGNETIC">REACTOR</button>
+    <button class="product-tab active" data-category="INDUSTRY">REACTOR</button>
   </div>
 
   <!-- Dynamic Layout Container -->
@@ -646,34 +652,34 @@
   (function () {
     const layoutData = {
       COB: [
-        { title: "Indoor Light", image: "assets/img/10.png", class: "box indoor" },
-        { title: "New Products", image: "assets/img/10.png", class: "box" },
-        { title: "Outdoor Light", image: "assets/img/10.png", class: "box outdoor" },
-        { title: "Auto Tracking Light", image: "assets/img/10.png", class: "box" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box indoor" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box outdoor" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box" },
       ],
       LASERBLADES: [
-        { title: "Indoor Light", image: "assets/img/11.png", class: "box indoor" },
-        { title: "New Products", image: "assets/img/11.png", class: "box" },
-        { title: "Outdoor Light", image: "assets/img/11.png", class: "box outdoor" },
-        { title: "Auto Tracking Light", image: "assets/img/11.png", class: "box" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box indoor" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box outdoor" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box" },
       ],
       WALLWASHERS: [
-        { title: "Indoor Light", image: "assets/img/10.png", class: "box indoor" },
-        { title: "New Products", image: "assets/img/10.png", class: "box" },
-        { title: "Outdoor Light", image: "assets/img/10.png", class: "box outdoor" },
-        { title: "Auto Tracking Light", image: "assets/img/10.png", class: "box" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box indoor" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box outdoor" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box" },
       ],
       MAGNETIC: [
-        { title: "Indoor Light", image: "assets/img/10.png", class: "box indoor" },
-        { title: "New Products", image: "assets/img/10.png", class: "box" },
-        { title: "Outdoor Light", image: "assets/img/10.png", class: "box outdoor" },
-        { title: "Auto Tracking Light", image: "assets/img/10.png", class: "box" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box indoor" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box outdoor" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box" },
       ],
       INDUSTRY: [
-        { title: "Indoor Light", image: "assets/img/10.png", class: "box indoor" },
-        { title: "New Products", image: "assets/img/10.png", class: "box" },
-        { title: "Outdoor Light", image: "assets/img/10.png", class: "box outdoor" },
-        { title: "Auto Tracking Light", image: "assets/img/10.png", class: "box" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box indoor" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box outdoor" },
+        { title: "Reactor", image: "assets/img/bans.png", class: "box" },
       ],
     };
 
@@ -843,12 +849,12 @@
 
 <script>
 const luxImages = [
-  { url: "assets/img/11.png", title: "Capella Bangkok", tag: "Luxury riverside escape in the heart of Bangkok." },
-  { url: "assets/img/15.png", title: "Alila Shanghai", tag: "Modern elegance blending culture and innovation." },
-  { url: "assets/img/16.png", title: "The St. Regis Macao", tag: "Timeless sophistication and exquisite hospitality." },
-  { url: "assets/img/17.png", title: "Andaz Nanjing Hexi", tag: "A stylish urban retreat above the skyline." },
-  { url: "assets/img/18.png", title: "Atlantis The Royal, Dubai", tag: "Where ocean meets opulence in every detail." },
-  { url: "assets/img/12.png", title: "W Maldives Resort", tag: "An island paradise reimagined with bold design." }
+  { url: "assets/img/bans.png", title: "Capella Bangkok", tag: "Luxury riverside escape in the heart of Bangkok." },
+  { url: "assets/img/bans.png", title: "Alila Shanghai", tag: "Modern elegance blending culture and innovation." },
+  { url: "assets/img/bans.png", title: "The St. Regis Macao", tag: "Timeless sophistication and exquisite hospitality." },
+  { url: "assets/img/bans.png", title: "Andaz Nanjing Hexi", tag: "A stylish urban retreat above the skyline." },
+  { url: "assets/img/bans.png", title: "Atlantis The Royal, Dubai", tag: "Where ocean meets opulence in every detail." },
+  { url: "assets/img/bans.png", title: "W Maldives Resort", tag: "An island paradise reimagined with bold design." }
 ];
 
 const luxImg = document.getElementById("lux_img");
@@ -903,255 +909,7 @@ setInterval(changeLuxSlide, 8000);
 
 
 
-    <!-- Testimonials Section -->
-    <!-- <section id="testimonials" class="testimonials section light-background">
-  
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div>
 
-      <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-lg-7">
-            <div class="swiper init-swiper">
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  },
-                  "breakpoints": {
-                    "320": {
-                      "slidesPerView": 1,
-                      "spaceBetween": 40
-                    },
-                    "1200": {
-                      "slidesPerView": 1,
-                      "spaceBetween": 1
-                    }
-                  }
-                }
-              </script>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="testimonial mx-auto">
-                    <figure class="img-wrap">
-                      <img src="assets/img/person/person-m-9.webp" alt="Image" class="img-fluid">
-                    </figure>
-                    <h3 class="name">Adam Aderson</h3>
-                    <blockquote>
-                      <p>
-                        “There live the blind texts. Separated they live in
-                        Bookmarksgrove right at the coast of the Semantics, a large
-                        language ocean.”
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonial mx-auto">
-                    <figure class="img-wrap">
-                      <img src="assets/img/person/person-f-5.webp" alt="Image" class="img-fluid">
-                    </figure>
-                    <h3 class="name">Lukas Devlin</h3>
-                    <blockquote>
-                      <p>
-                        “There live the blind texts. Separated they live in
-                        Bookmarksgrove right at the coast of the Semantics, a large
-                        language ocean.”
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonial mx-auto">
-                    <figure class="img-wrap">
-                      <img src="assets/img/person/person-f-12.webp" alt="Image" class="img-fluid">
-                    </figure>
-                    <h3 class="name">Kayla Bryant</h3>
-                    <blockquote>
-                      <p>
-                        “There live the blind texts. Separated they live in
-                        Bookmarksgrove right at the coast of the Semantics, a large
-                        language ocean.”
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- /Testimonials Section -->
-
-
-<!-- kelvin animation start -->
-<section class="kelvi" id="kelvinSection">
-  <div class="kelvinBanner">
-    <div class="kelvinLamp k1800"><img src="assets/img/kelvins.png" class="kelvinImg"><div class="kelvinGlow"></div><div class="kelvinLabel">1800 K</div></div>
-    <div class="kelvinLamp k2200"><img src="assets/img/kelvins.png" class="kelvinImg"><div class="kelvinGlow"></div><div class="kelvinLabel">2200 K</div></div>
-    <div class="kelvinLamp k2700"><img src="assets/img/kelvins.png" class="kelvinImg"><div class="kelvinGlow"></div><div class="kelvinLabel">2700 K</div></div>
-    <div class="kelvinLamp k3000"><img src="assets/img/kelvins.png" class="kelvinImg"><div class="kelvinGlow"></div><div class="kelvinLabel">3000 K</div></div>
-    <div class="kelvinLamp k3500"><img src="assets/img/kelvins.png" class="kelvinImg"><div class="kelvinGlow"></div><div class="kelvinLabel">3500 K</div></div>
-    <div class="kelvinLamp k4000"><img src="assets/img/kelvins.png" class="kelvinImg"><div class="kelvinGlow"></div><div class="kelvinLabel">4000 K</div></div>
-    <div class="kelvinLamp k5000"><img src="assets/img/kelvins.png" class="kelvinImg"><div class="kelvinGlow"></div><div class="kelvinLabel">5000 K</div></div>
-    <div class="kelvinLamp k6500"><img src="assets/img/kelvins.png" class="kelvinImg"><div class="kelvinGlow"></div><div class="kelvinLabel">6500 K</div></div>
-    <div class="kelvinLamp k8000"><img src="assets/img/kelvins.png" class="kelvinImg"><div class="kelvinGlow"></div><div class="kelvinLabel">8000 K</div></div>
-    <div class="kelvinLamp k10000"><img src="assets/img/kelvins.png" class="kelvinImg"><div class="kelvinGlow"></div><div class="kelvinLabel">10000 K</div></div>
-    <div class="kelvinLamp k12000"><img src="assets/img/kelvins.png" class="kelvinImg"><div class="kelvinGlow"></div><div class="kelvinLabel">12000 K</div></div>
-  </div>
-</section>
-
-<style>
-.kelvi {
-  margin: 0;
-  background: linear-gradient(to bottom, #050505, #111);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
-  overflow: hidden;
-}
-
-/* MAIN WRAPPER */
-.kelvinBanner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  text-align: center;
-  padding: 60px 40px;
-  width: 100%;
-  max-width: 1400px;
-  flex-wrap: nowrap;
-}
-
-/* EACH UNIT */
-.kelvinLamp {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  min-width: 0;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.kelvinLamp.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* LAMP IMAGE */
-.kelvinImg {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  z-index: 2;
-  position: relative;
-  filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.kelvinLamp:hover .kelvinImg {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 25px rgba(255,255,255,0.6));
-}
-
-/* GLOW EFFECT */
-.kelvinGlow {
-  position: absolute;
-  top: 70px;
-  width: 40px;
-  height: 180px;
-  border-radius: 50%;
-  filter: blur(35px);
-  opacity: 0.9;
-  animation: kelvinPulse 3s infinite ease-in-out;
-  z-index: 1;
-}
-
-@keyframes kelvinPulse {
-  0%, 100% { opacity: 0.8; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.1); }
-}
-
-/* LABEL */
-.kelvinLabel {
-  margin-top: 200px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-}
-
-.kelvinLamp.visible .kelvinLabel {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* COLOR VARIANTS - Realistic Temperature Tones */
-.k1800  .kelvinGlow { background: #ff4b00; }   
-.k2200  .kelvinGlow { background: #ff6a00; }   
-.k2700  .kelvinGlow { background: #ff8c1a; }   
-.k3000  .kelvinGlow { background: #ffb347; }   
-.k3500  .kelvinGlow { background: #ffd280; }   
-.k4000  .kelvinGlow { background: #fff1cc; }   
-.k5000  .kelvinGlow { background: #f2f7ff; }   
-.k6500  .kelvinGlow { background: #e0f0ff; }   
-.k8000  .kelvinGlow { background: #b3daff; }   
-.k10000 .kelvinGlow { background: #80bfff; }   
-.k12000 .kelvinGlow { background: #4d9aff; }   
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .kelvinImg { width: 50px; height: 50px; }
-  .kelvinGlow { height: 140px; top: 60px; }
-  .kelvinLabel { font-size: 0.8rem; margin-top: 180px; }
-}
-
-@media (max-width: 600px) {
-  .kelvinBanner { padding: 40px 10px; }
-  .kelvinImg { width: 40px; height: 40px; }
-  .kelvinGlow { width: 30px; height: 120px; top: 55px; }
-  .kelvinLabel { font-size: 0.7rem; margin-top: 160px; }
-}
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const lamps = document.querySelectorAll(".kelvinLamp");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add("visible");
-        }, index * 150); // sequential delay for professional stagger effect
-      }
-    });
-  }, { threshold: 0.2 });
-
-  lamps.forEach(lamp => observer.observe(lamp));
-});
-</script>
-<!-- kelvin animation end -->
 
 
 
@@ -1582,7 +1340,7 @@ document.addEventListener("DOMContentLoaded", () => {
     display: flex;
     justify-content: end;
     align-items: center;
-    background: url('assets/img/childlight.png') center/cover no-repeat;
+    background: url('assets/img/bannerlast.png') center/cover no-repeat;
   }
 
   .overlay {
@@ -1753,6 +1511,157 @@ window.addEventListener("resize", () => {
   });
 });
 </script>
+
+
+<!-- FOOTER START -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="assets/img/logos.png" alt="Company Logo">
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <p>
+        <a href="mailto:anasahmedreactorcare@gmail.com">
+          anasahmedreactorcare@gmail.com
+        </a>
+      </p>
+      <p>Hyderabad, Telangana</p>
+      <p>
+        <a href="tel:+919550219901">
+          +91 9550219901
+        </a>
+      </p>
+    </div>
+
+    <!-- Social + Button -->
+    <div class="footer-actions">
+
+      <div class="social-icons">
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V11h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm4.8-2.3a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"/>
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.6h.1a4.2 4.2 0 0 1 3.8-2c4 0 4.7 2.6 4.7 6v6H17v-5.3c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9z"/>
+          </svg>
+        </a>
+      </div>
+
+      <a href="mailto:anasahmedreactorcare@gmail.com" class="contact-btn">
+        Contact Us
+      </a>
+
+    </div>
+  </div>
+</footer>
+
+<style>
+/* Footer Base */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 35px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.footer-logo img {
+  max-width: 140px;
+}
+
+/* Contact */
+.footer-contact {
+  text-align: start;
+  font-size: 14px;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Actions */
+.footer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.social-icons svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover svg {
+  opacity: 0.7;
+}
+
+/* Button */
+.contact-btn {
+  padding: 8px 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.contact-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: start;
+  }
+}
+</style>
+<!-- FOOTER END -->
+
+
 
 </body>
 
