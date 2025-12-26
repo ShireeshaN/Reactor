@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Starter Page - MinimalFolio Bootstrap Template</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: MinimalFolio
+  * Template URL: https://bootstrapmade.com/minimalfolio-bootstrap-portfolio-template/
+  * Updated: Aug 05 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="starter-page-page">
+
+    <header id="header" class="header d-flex align-items-center ">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <img class="logoos" src="assets/img/logos1.png" alt="">
+                <!-- <h1 class="sitename text-white">ARTIEA</h1> -->
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown"><a href="#"><span>Services</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="glass-lined-reactor.html">Glass-Lined Reactors</a></li>
+                            <li><a href="stainless-steel-reactor.html">Stainless Steel Reactors</a></li>
+                            <li><a href="high-pressure-reactor.html">High-Pressure Reactors (Autoclaves)</a></li>
+                            <li><a href="hastelloy-reactor.html">Hastelloy® Reactors</a></li>
+                            <li><a href="biocreator-fermenters.html">Bioreactors / Fermenters</a></li>
+                            <li><a href="jacketed-reactor-vessels.html">Jacketed Reactor Vessels</a></li>
+                            <li><a href="single-use-reactor.html">Single-Use Reactors</a></li>
+                            <li><a href="continuous-flow-reactor.html">Continuous Flow Reactors</a></li>
+                            <li><a href="reactor-maintenance.html">Reactor Maintenance &amp; Servicing</a></li>
+                            <li><a href="reactor-buy-back-program.html">Reactor Buy-Back Program</a></li>
+                            <li><a href="reactorcare-verified-system.html">ReactorCare™ Verified Systems</a></li>
+                            <li><a href="process-plant-setup-integration.html">Process Plant Setup &amp; Integration</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="main">
+
+<!-- Starter Section Section -->
+<section id="starter-section" class="starter-section section">
+
+    <!-- Section Title -->
+   <div class="container section-title" data-aos="fade-up">
+    <h2 style="font-size:42px; font-weight:800; letter-spacing:1px;">
+        Hastelloy® Reactors
+    </h2>
+    <p style="font-size:16px; font-weight:600; max-width:720px; margin:auto; opacity:0.9;">
+        Precision-engineered Hastelloy® reactors offering superior corrosion resistance, high durability, and reliable performance. Ideal for pharmaceutical, chemical, and industrial applications, these reactors are designed to handle aggressive chemicals and demanding operational conditions while ensuring optimal efficiency and safety.
+    </p>
+</div>
+<!-- End Section Title -->
+
+</section>
+<!-- /Starter Section Section -->
+
+
+
+       <!-- STAINLESS STEEL REACTOR ANIMATED BANNER -->
+<section class="banner-section ssr-banner">
+    <div class="banner" id="banner">
+        <img id="banner-img" src="assets/img/bannerlast.png" alt="Stainless Steel Reactor">
+
+        <div class="overlay">
+            <h1 id="banner-title">Hastelloy® Reactors</h1>
+           <p id="banner-tag">
+                Precision-engineered Hastelloy® reactors for chemical, pharmaceutical, and industrial applications requiring high corrosion resistance and durability.
+            </p>
+        </div>
+
+        <div class="slices" id="slices"></div>
+    </div>
+</section>
+
+<style>
+    /* ================= BANNER BASE ================= */
+    .ssr-banner {
+        background: #ffffff;
+    }
+
+    .banner-section {
+        width: 100%;
+        height: 90vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.75);
+    }
+
+    /* ================= OVERLAY ================= */
+    .overlay {
+        position: absolute;
+        bottom: 80px;
+        left: 60px;
+        color: #ffffff;
+        z-index: 10;
+        max-width: 620px;
+    }
+
+    .overlay h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    .overlay p {
+        font-size: 1.15rem;
+        opacity: 0.9;
+        line-height: 1.6;
+    }
+
+    /* ================= SLICE ANIMATION ================= */
+    .slices {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        z-index: 5;
+    }
+
+    .slice {
+        flex: 1;
+        background: #ffffff;
+        transform: translateY(0%);
+        transition: transform 1.4s ease-in-out;
+    }
+
+    .slice.hide {
+        transform: translateY(-100%);
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width:1024px) {
+        .overlay {
+            bottom: 60px;
+            left: 40px;
+        }
+
+        .overlay h1 {
+            font-size: 2.4rem;
+        }
+
+        .overlay p {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width:768px) {
+        .banner-section {
+            height: 70vh;
+        }
+
+        .overlay {
+            bottom: 40px;
+            left: 30px;
+        }
+
+        .overlay h1 {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width:480px) {
+        .banner-section {
+            height: 60vh;
+        }
+
+        .overlay {
+            bottom: 25px;
+            left: 20px;
+        }
+
+        .overlay h1 {
+            font-size: 1.6rem;
+        }
+
+        .overlay p {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+<script>
+    const images = [
+        {
+            url: "assets/img/hastelloy-banner1.png",
+            title: "Hastelloy® Reactors",
+            tag: "Precision-engineered Hastelloy® reactors for chemical, pharmaceutical, and industrial applications requiring high corrosion resistance and durability."
+        },
+        {
+            url: "assets/img/hastelloy-banner2.png",
+            title: "Corrosion-Resistant Design",
+            tag: "Built to handle aggressive chemicals while ensuring long-term reliability and optimal performance."
+        },
+        {
+            url: "assets/img/hastelloy-banner3.png",
+            title: "Custom Fabrication",
+            tag: "Tailored designs to meet specific process requirements and operational conditions."
+        },
+        {
+            url: "assets/img/hastelloy-banner4.png",
+            title: "Safety & Compliance",
+            tag: "Engineered to comply with international pressure, temperature, and safety standards."
+        },
+        {
+            url: "assets/img/hastelloy-banner5.png",
+            title: "Complete Lifecycle Support",
+            tag: "End-to-end solutions including design, supply, installation, maintenance, and performance optimization."
+        }
+    ];
+    const bannerImg = document.getElementById("banner-img");
+    const slicesContainer = document.getElementById("slices");
+    const title = document.getElementById("banner-title");
+    const tag = document.getElementById("banner-tag");
+
+    let current = 0;
+    const sliceCount = 12;
+
+    function createSlices() {
+        slicesContainer.innerHTML = "";
+        for (let i = 0; i < sliceCount; i++) {
+            const div = document.createElement("div");
+            div.classList.add("slice");
+            slicesContainer.appendChild(div);
+        }
+    }
+
+    function animateSlices() {
+        const slices = document.querySelectorAll(".slice");
+        slices.forEach((slice, index) => {
+            setTimeout(() => {
+                slice.classList.add("hide");
+            }, index * 110);
+        });
+    }
+
+    function changeSlide() {
+        current = (current + 1) % images.length;
+        const item = images[current];
+        bannerImg.src = item.url;
+        title.textContent = item.title;
+        tag.textContent = item.tag;
+
+        createSlices();
+        setTimeout(animateSlices, 50);
+    }
+
+    createSlices();
+    animateSlices();
+    setInterval(changeSlide, 8000);
+</script>
+
+
+<!-- mainnsss start -->
+<!-- Hastelloy® Reactors Page Sections Start -->
+
+
+
+<!-- Features Section -->
+<section class="features" style="padding:60px 20px; background:#ffffff; color:#111; text-align:center;">
+    <h2 style="font-size:32px; margin-bottom:40px;">Key Features</h2>
+    <div class="feature-grid" style="display:flex; flex-wrap:wrap; justify-content:center; gap:25px;">
+        <div class="feature-card" style="flex:1 1 200px; max-width:240px; padding:20px; background:#f1f1f1; border-radius:8px;">
+            <img src="https://via.placeholder.com/50" alt="Corrosion" style="margin-bottom:15px;">
+            <h3 style="font-size:18px; margin-bottom:10px;">Corrosion Resistance</h3>
+            <p>Handles highly corrosive chemicals like strong acids & halides.</p>
+        </div>
+        <div class="feature-card" style="flex:1 1 200px; max-width:240px; padding:20px; background:#f1f1f1; border-radius:8px;">
+            <img src="https://via.placeholder.com/50" alt="High Temp" style="margin-bottom:15px;">
+            <h3 style="font-size:18px; margin-bottom:10px;">High Temperature</h3>
+            <p>Operates efficiently at extreme temperatures without compromising integrity.</p>
+        </div>
+        <div class="feature-card" style="flex:1 1 200px; max-width:240px; padding:20px; background:#f1f1f1; border-radius:8px;">
+            <img src="https://via.placeholder.com/50" alt="Durable" style="margin-bottom:15px;">
+            <h3 style="font-size:18px; margin-bottom:10px;">Durable & Strong</h3>
+            <p>Robust design ensures long-term reliability under continuous operation.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Technical Specs Section -->
+<section class="specs" style="padding:60px 20px; background:#f9f9f9; color:#111;">
+    <h2 style="text-align:center; font-size:32px; margin-bottom:40px;">Technical Specifications</h2>
+    <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; text-align:left; min-width:600px; background:#fff; border-radius:8px; overflow:hidden;">
+            <tr style="border-bottom:1px solid #ddd;">
+                <th style="padding:12px; background:#eaeaea;">Specification</th>
+                <th style="padding:12px; background:#eaeaea;">Details</th>
+            </tr>
+            <tr style="border-bottom:1px solid #ddd;">
+                <td style="padding:12px;">Material</td>
+                <td style="padding:12px;">Hastelloy® C22 / C276</td>
+            </tr>
+            <tr style="border-bottom:1px solid #ddd;">
+                <td style="padding:12px;">Volume</td>
+                <td style="padding:12px;">50L – 5000L (Customizable)</td>
+            </tr>
+            <tr style="border-bottom:1px solid #ddd;">
+                <td style="padding:12px;">Max Pressure</td>
+                <td style="padding:12px;">10 bar / 150 psi</td>
+            </tr>
+            <tr style="border-bottom:1px solid #ddd;">
+                <td style="padding:12px;">Max Temperature</td>
+                <td style="padding:12px;">300°C</td>
+            </tr>
+            <tr style="border-bottom:1px solid #ddd;">
+                <td style="padding:12px;">Jacket Type</td>
+                <td style="padding:12px;">Single / Double / Half Coil</td>
+            </tr>
+            <tr>
+                <td style="padding:12px;">Agitator Type</td>
+                <td style="padding:12px;">Anchor / Turbine / Custom</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<!-- Applications Section -->
+<section class="applications" style="padding:60px 20px; background:#ffffff; color:#111; text-align:center;">
+    <h2 style="font-size:32px; margin-bottom:40px;">Applications</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:25px;">
+        <div style="flex:1 1 240px; max-width:280px; background:#f1f1f1; border-radius:8px; padding:15px;">
+            <img src="https://via.placeholder.com/250x150" alt="Pharma" style="border-radius:6px; margin-bottom:12px;">
+            <h3>Pharmaceutical</h3>
+            <p>Intermediate & API synthesis for pharma industry.</p>
+        </div>
+        <div style="flex:1 1 240px; max-width:280px; background:#f1f1f1; border-radius:8px; padding:15px;">
+            <img src="https://via.placeholder.com/250x150" alt="Chemical" style="border-radius:6px; margin-bottom:12px;">
+            <h3>Chemicals</h3>
+            <p>Specialty chemical reactions and corrosive material handling.</p>
+        </div>
+        <div style="flex:1 1 240px; max-width:280px; background:#f1f1f1; border-radius:8px; padding:15px;">
+            <img src="https://via.placeholder.com/250x150" alt="R&D" style="border-radius:6px; margin-bottom:12px;">
+            <h3>R&D & Pilot</h3>
+            <p>Research and pilot plant operations for safe process development.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section - Pro Modern Redesign -->
+<section class="why-choose-pro" style="padding:100px 20px; background:#fdfdfd; color:#111; position:relative; overflow:hidden;">
+    <h2 style="font-size:40px; font-weight:800; text-align:center; margin-bottom:80px;">Why Choose Hastelloy® Reactors?</h2>
+
+    <div class="tiles-pro" style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px; max-width:1200px; margin:auto; position:relative;">
+
+        <!-- Tile 1 -->
+        <div class="tile-pro" style="background:linear-gradient(135deg, #ffffff, #f5f5f5); padding:40px; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.08); width:280px; position:relative; transform:translateY(0); transition:all 0.6s ease;">
+            <div style="font-size:40px; margin-bottom:15px; color:#00c3ff;">🛡️</div>
+            <h3 style="font-size:22px; font-weight:700; margin-bottom:12px;">Corrosion Resistant</h3>
+            <p style="font-size:15px; line-height:1.7; opacity:0.85;">Handles harsh chemicals reliably with advanced material protection.</p>
+        </div>
+
+        <!-- Tile 2 -->
+        <div class="tile-pro" style="background:linear-gradient(135deg, #ffffff, #f5f5f5); padding:40px; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.08); width:280px; position:relative; transform:translateY(30px); transition:all 0.6s ease;">
+            <div style="font-size:40px; margin-bottom:15px; color:#00c3ff;">⚙️</div>
+            <h3 style="font-size:22px; font-weight:700; margin-bottom:12px;">Durable & Strong</h3>
+            <p style="font-size:15px; line-height:1.7; opacity:0.85;">Built for long-term industrial reliability and consistent performance.</p>
+        </div>
+
+        <!-- Tile 3 -->
+        <div class="tile-pro" style="background:linear-gradient(135deg, #ffffff, #f5f5f5); padding:40px; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.08); width:280px; position:relative; transform:translateY(-30px); transition:all 0.6s ease;">
+            <div style="font-size:40px; margin-bottom:15px; color:#00c3ff;">🛠️</div>
+            <h3 style="font-size:22px; font-weight:700; margin-bottom:12px;">Customizable</h3>
+            <p style="font-size:15px; line-height:1.7; opacity:0.85;">Tailored solutions for every specific chemical process requirement.</p>
+        </div>
+
+        <!-- Tile 4 -->
+        <div class="tile-pro" style="background:linear-gradient(135deg, #ffffff, #f5f5f5); padding:40px; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.08); width:280px; position:relative; transform:translateY(20px); transition:all 0.6s ease;">
+            <div style="font-size:40px; margin-bottom:15px; color:#00c3ff;">✅</div>
+            <h3 style="font-size:22px; font-weight:700; margin-bottom:12px;">Safety Standards</h3>
+            <p style="font-size:15px; line-height:1.7; opacity:0.85;">Certified and compliant with international safety protocols.</p>
+        </div>
+
+        <!-- Tile 5 -->
+        <div class="tile-pro" style="background:linear-gradient(135deg, #ffffff, #f5f5f5); padding:40px; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.08); width:280px; position:relative; transform:translateY(0); transition:all 0.6s ease;">
+            <div style="font-size:40px; margin-bottom:15px; color:#00c3ff;">⚡</div>
+            <h3 style="font-size:22px; font-weight:700; margin-bottom:12px;">Optimized Performance</h3>
+            <p style="font-size:15px; line-height:1.7; opacity:0.85;">Ensures smooth and efficient chemical processes with advanced design.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- JS for Hover & Lift Animation -->
+<script>
+    const tilesPro = document.querySelectorAll('.tile-pro');
+    tilesPro.forEach(tile => {
+        tile.addEventListener('mouseenter', () => {
+            tile.style.transform = 'translateY(-15px)';
+            tile.style.boxShadow = '0 30px 50px rgba(0,0,0,0.12)';
+        });
+        tile.addEventListener('mouseleave', () => {
+            const offsets = [0,30,-30,20,0];
+            const index = Array.from(tilesPro).indexOf(tile);
+            tile.style.transform = `translateY(${offsets[index]}px)`;
+            tile.style.boxShadow = '0 20px 40px rgba(0,0,0,0.08)';
+        });
+    });
+</script>
+
+<!-- Minimal Pro Horizontal CTA Card -->
+<section class="cta-card" style="padding:80px 0; display:flex; justify-content:center; background:#f9f9f9;">
+    <div style="width:100%; max-width:900px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; background:#ffffff; padding:40px; border-radius:20px; box-shadow:0 20px 50px rgba(0,0,0,0.08);">
+        
+        <!-- Tagline -->
+        <div style="flex:1 1 400px; min-width:280px;">
+            <h2 style="font-size:28px; font-weight:800; margin-bottom:10px; line-height:1.3; color:#111;">
+                Get Your Custom Hastelloy® Reactor Today
+            </h2>
+            <p style="font-size:16px; opacity:0.8; line-height:1.5; margin:0;">
+                Trusted solutions for high-performance chemical processes. Talk to our experts for tailored recommendations.
+            </p>
+        </div>
+
+        <!-- Minimal Button -->
+        <div style="flex:0 1 auto; min-width:150px; text-align:right;">
+            <a href="#contact" 
+               style="display:inline-block; padding:12px 28px; background:#111; color:#fff; font-weight:600; font-size:16px; border-radius:8px; text-decoration:none; transition:all 0.3s ease;"
+               onmouseover="this.style.background='#fff'; this.style.color='#111'; this.style.border='1px solid #111';"
+               onmouseout="this.style.background='#111'; this.style.color='#fff'; this.style.border='none';">
+               Contact Us
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Hastelloy® Reactors Page Sections End -->
+
+<!-- mainsss ends -->
+
+
+
+<!-- Include AOS script at bottom -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+
+    </main>
+
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+
+
+
+
+    <!-- FOOTER START -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img src="assets/img/logos.png" alt="Company Logo">
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <p>
+                    <a href="mailto:anasahmedreactorcare@gmail.com">
+                        anasahmedreactorcare@gmail.com
+                    </a>
+                </p>
+                <p>Hyderabad, Telangana</p>
+                <p>
+                    <a href="tel:+919550219901">
+                        +91 9550219901
+                    </a>
+                </p>
+            </div>
+
+            <!-- Social + Button -->
+            <div class="footer-actions">
+
+                <div class="social-icons">
+                    <!-- Facebook -->
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V11h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12z" />
+                        </svg>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm4.8-2.3a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z" />
+                        </svg>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.6h.1a4.2 4.2 0 0 1 3.8-2c4 0 4.7 2.6 4.7 6v6H17v-5.3c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <a href="mailto:anasahmedreactorcare@gmail.com" class="contact-btn">
+                    Contact Us
+                </a>
+
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Footer Base */
+        .footer {
+            background: #111;
+            color: #fff;
+            padding: 35px 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Layout */
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Logo */
+        .footer-logo img {
+            max-width: 140px;
+        }
+
+        /* Contact */
+        .footer-contact {
+            text-align: start;
+            font-size: 14px;
+        }
+
+        .footer-contact p {
+            margin: 6px 0;
+        }
+
+        .footer-contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Actions */
+        .footer-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .social-icons svg {
+            width: 22px;
+            height: 22px;
+            fill: #fff;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-icons a:hover svg {
+            opacity: 0.7;
+        }
+
+        /* Button */
+        .contact-btn {
+            padding: 8px 20px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .contact-btn:hover {
+            background: #fff;
+            color: #111;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: start;
+            }
+        }
+    </style>
+    <!-- FOOTER END -->
+
+</body>
+
+</html>
