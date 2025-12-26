@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Starter Page - MinimalFolio Bootstrap Template</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: MinimalFolio
+  * Template URL: https://bootstrapmade.com/minimalfolio-bootstrap-portfolio-template/
+  * Updated: Aug 05 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="starter-page-page">
+
+    <header id="header" class="header d-flex align-items-center ">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <img class="logoos" src="assets/img/logos1.png" alt="">
+                <!-- <h1 class="sitename text-white">ARTIEA</h1> -->
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown"><a href="#"><span>Services</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="glass-lined-reactor.html">Glass-Lined Reactors</a></li>
+                            <li><a href="stainless-steel-reactor.html">Stainless Steel Reactors</a></li>
+                            <li><a href="high-pressure-reactor.html">High-Pressure Reactors (Autoclaves)</a></li>
+                            <li><a href="hastelloy-reactor.html">Hastelloy® Reactors</a></li>
+                            <li><a href="biocreator-fermenters.html">Bioreactors / Fermenters</a></li>
+                            <li><a href="jacketed-reactor-vessels.html">Jacketed Reactor Vessels</a></li>
+                            <li><a href="single-use-reactor.html">Single-Use Reactors</a></li>
+                            <li><a href="continuous-flow-reactor.html">Continuous Flow Reactors</a></li>
+                            <li><a href="reactor-maintenance.html">Reactor Maintenance &amp; Servicing</a></li>
+                            <li><a href="reactor-buy-back-program.html">Reactor Buy-Back Program</a></li>
+                            <li><a href="reactorcare-verified-system.html">ReactorCare™ Verified Systems</a></li>
+                            <li><a href="process-plant-setup-integration.html">Process Plant Setup &amp; Integration</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="main">
+
+
+        <!-- Starter Section Section -->
+        <section id="starter-section" class="starter-section section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2 style="font-size:42px; font-weight:800; letter-spacing:1px;">
+                    Glass Lined Reactor
+                </h2>
+                <p style="font-size:16px; font-weight:600; max-width:720px; margin:auto; opacity:0.9;">
+                    High-performance reactors engineered for superior corrosion resistance,
+                    process safety, and long-term reliability in demanding industrial applications.
+                </p>
+            </div><!-- End Section Title -->
+
+        </section>
+        <!-- /Starter Section Section -->
+
+
+        <!-- GLASS LINED REACTOR ANIMATED BANNER -->
+
+        <section class="banner-section glass-line-banner">
+            <div class="banner" id="banner">
+                <img id="banner-img" src="assets/img/bans.png" alt="Glass Lined Reactor">
+
+                <div class="overlay">
+                    <h1 id="banner-title">Glass-Lined Reactors</h1>
+                    <p id="banner-tag">
+                        Corrosion-resistant reactor systems for pharmaceutical and chemical processing.
+                    </p>
+                </div>
+
+                <div class="slices" id="slices"></div>
+            </div>
+        </section>
+
+        <style>
+            /* ================= BANNER BASE ================= */
+            .glass-line-banner {
+                background: #ffffff;
+            }
+
+            .banner-section {
+                width: 100%;
+                height: 90vh;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .banner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+
+            .banner img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: brightness(0.75);
+            }
+
+            /* ================= OVERLAY ================= */
+            .overlay {
+                position: absolute;
+                bottom: 80px;
+                left: 60px;
+                color: #ffffff;
+                z-index: 10;
+                max-width: 620px;
+            }
+
+            .overlay h1 {
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 12px;
+                letter-spacing: 0.5px;
+            }
+
+            .overlay p {
+                font-size: 1.15rem;
+                opacity: 0.9;
+                line-height: 1.6;
+            }
+
+            /* ================= SLICE ANIMATION ================= */
+            .slices {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                z-index: 5;
+            }
+
+            .slice {
+                flex: 1;
+                background: #ffffff;
+                transform: translateY(0%);
+                transition: transform 1.4s ease-in-out;
+            }
+
+            .slice.hide {
+                transform: translateY(-100%);
+            }
+
+            /* ================= RESPONSIVE ================= */
+            @media (max-width:1024px) {
+                .overlay {
+                    bottom: 60px;
+                    left: 40px;
+                }
+
+                .overlay h1 {
+                    font-size: 2.4rem;
+                }
+
+                .overlay p {
+                    font-size: 1rem;
+                }
+            }
+
+            @media (max-width:768px) {
+                .banner-section {
+                    height: 70vh;
+                }
+
+                .overlay {
+                    bottom: 40px;
+                    left: 30px;
+                }
+
+                .overlay h1 {
+                    font-size: 2rem;
+                }
+            }
+
+            @media (max-width:480px) {
+                .banner-section {
+                    height: 60vh;
+                }
+
+                .overlay {
+                    bottom: 25px;
+                    left: 20px;
+                }
+
+                .overlay h1 {
+                    font-size: 1.6rem;
+                }
+
+                .overlay p {
+                    font-size: 0.9rem;
+                }
+            }
+        </style>
+
+        <script>
+            const images = [
+                {
+                    url: "assets/img/bans.png",
+                    title: "Glass-Lined Reactors",
+                    tag: "High-purity reactors engineered for corrosive chemical environments."
+                },
+                {
+                    url: "assets/img/bannerlast.png",
+                    title: "Pharmaceutical Grade Design",
+                    tag: "GMP-compliant solutions ensuring product safety and integrity."
+                },
+                {
+                    url: "assets/img/bannerlast.png",
+                    title: "Jacketed & Coil Reactors",
+                    tag: "Precise temperature control for critical reaction processes."
+                },
+                {
+                    url: "assets/img/bannerlast.png",
+                    title: "Pressure & Vacuum Systems",
+                    tag: "Engineered for safe operation under extreme conditions."
+                },
+                {
+                    url: "assets/img/bannerlast.png",
+                    title: "End-to-End Reactor Solutions",
+                    tag: "Design, supply, installation, maintenance, and lifecycle support."
+                }
+            ];
+
+            const bannerImg = document.getElementById("banner-img");
+            const slicesContainer = document.getElementById("slices");
+            const title = document.getElementById("banner-title");
+            const tag = document.getElementById("banner-tag");
+
+            let current = 0;
+            const sliceCount = 12;
+
+            function createSlices() {
+                slicesContainer.innerHTML = "";
+                for (let i = 0; i < sliceCount; i++) {
+                    const div = document.createElement("div");
+                    div.classList.add("slice");
+                    slicesContainer.appendChild(div);
+                }
+            }
+
+            function animateSlices() {
+                const slices = document.querySelectorAll(".slice");
+                slices.forEach((slice, index) => {
+                    setTimeout(() => {
+                        slice.classList.add("hide");
+                    }, index * 110);
+                });
+            }
+
+            function changeSlide() {
+                current = (current + 1) % images.length;
+                const item = images[current];
+                bannerImg.src = item.url;
+                title.textContent = item.title;
+                tag.textContent = item.tag;
+
+                createSlices();
+                setTimeout(animateSlices, 50);
+            }
+
+            createSlices();
+            animateSlices();
+            setInterval(changeSlide, 8000);
+        </script>
+
+        <!-- GLASS LINED REACTOR ANIMATED BANNER END -->
+
+
+        <style>
+            :root {
+                --glass-dark: #0d1b22;
+                --glass-light: #f4f6f7;
+                --glass-white: #ffffff;
+                --glass-accent: #1f7a8c;
+                --glass-muted: #6e7b85;
+                --glass-max: 1200px;
+            }
+
+            .glass-line-section {
+                padding: 80px 20px;
+            }
+
+            .glass-line-wrap {
+                max-width: var(--glass-max);
+                margin: auto;
+            }
+
+            .glass-line-heading {
+                font-size: 28px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .glass-line-text {
+                color: var(--glass-muted);
+                line-height: 1.7;
+                margin-bottom: 15px;
+            }
+
+            .glass-line-flex {
+                display: flex;
+                gap: 40px;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .glass-line-flex.reverse {
+                flex-direction: row-reverse;
+            }
+
+            .glass-line-img {
+                flex: 1 1 420px;
+            }
+
+            .glass-line-img img {
+                width: 100%;
+                border-radius: 12px;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, .15);
+            }
+
+            .glass-line-content {
+                flex: 1 1 480px;
+            }
+
+            .glass-line-types-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 30px;
+                margin-top: 40px;
+            }
+
+            .glass-line-card {
+                background: var(--glass-white);
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            }
+
+            .glass-line-card img {
+                width: 100%;
+                border-radius: 8px;
+                margin-bottom: 15px;
+            }
+
+            .glass-line-card h4 {
+                margin-bottom: 10px;
+                color: var(--glass-dark);
+            }
+
+            .glass-line-features {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 20px;
+                margin-top: 30px;
+            }
+
+            .glass-line-feature {
+                background: #eef3f5;
+                padding: 22px;
+                border-left: 4px solid var(--glass-accent);
+            }
+
+            .glass-line-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 30px;
+            }
+
+            .glass-line-table td {
+                padding: 14px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .glass-line-apps {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 25px;
+                margin-top: 40px;
+            }
+
+            .glass-line-app {
+                background: #eef3f5;
+                padding: 25px;
+                border-radius: 10px;
+            }
+
+            .glass-line-cta {
+                background: var(--glass-dark);
+                color: var(--glass-white);
+                text-align: center;
+            }
+
+            .glass-line-cta a {
+                display: inline-block;
+                margin-top: 25px;
+                padding: 14px 36px;
+                background: var(--glass-accent);
+                color: #fff;
+                text-decoration: none;
+                border-radius: 30px;
+            }
+
+            @media(max-width:768px) {
+                .glass-line-heading {
+                    font-size: 24px;
+                }
+            }
+        </style>
+
+        <!-- INTRO -->
+        <section class="glass-line-section">
+            <div class="glass-line-wrap glass-line-flex">
+                <div class="glass-line-content">
+                    <h2 class="glass-line-heading">Glass-Lined Reactors</h2>
+                    <p class="glass-line-text">
+                        Glass-lined reactors are high-performance process vessels that combine the
+                        mechanical strength of carbon steel with the exceptional chemical resistance
+                        of a glass lining. This construction makes them ideal for handling corrosive,
+                        aggressive, and high-purity chemical reactions.
+                    </p>
+                    <p class="glass-line-text">
+                        They are extensively used in pharmaceutical, chemical, agrochemical, and
+                        specialty industries where contamination control, safety, and durability
+                        are mission-critical.
+                    </p>
+                </div>
+                <div class="glass-line-img">
+                    <img src="assets/img/bannerlast.png" alt="Glass Lined Reactor">
+                </div>
+            </div>
+        </section>
+
+       <!-- TYPES start -->
+<style>
+:root{
+  --glr-dark:#0d1b22;
+  --glr-accent:#1f7a8c;
+  --glr-muted:#6e7b85;
+  --glr-bg:#eef2f3;
+}
+
+/* SECTION */
+.glass-line-section{
+  padding:70px 15px;
+}
+.glass-line-wrap{
+  max-width:1200px;
+  margin:auto;
+}
+.glass-line-heading{
+  font-size:32px;
+  font-weight:700;
+  color:var(--glr-dark);
+  margin-bottom:35px;
+}
+
+/* ASYMMETRIC GRID */
+.glr-asymmetric-grid{
+  display:grid;
+  grid-template-columns:repeat(10,1fr);
+  gap:18px;
+}
+
+/* CARD */
+.glr-type-card{
+  background:#fff;
+  box-shadow:0 14px 36px rgba(0,0,0,.07);
+  transition:.4s ease;
+  overflow:hidden;
+}
+.glr-type-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 26px 60px rgba(0,0,0,.14);
+}
+
+/* IMAGE */
+.glr-img{
+  height:420px;
+  overflow:hidden;
+}
+.glr-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:1.1s ease;
+}
+.glr-type-card:hover img{
+  transform:scale(1.06);
+}
+
+/* CONTENT */
+.glr-content{
+  padding:22px;
+}
+.glr-content h4{
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:8px;
+  color:var(--glr-dark);
+}
+.glr-content p{
+  font-size:14px;
+  color:var(--glr-muted);
+  line-height:1.6;
+}
+
+/* TAG */
+.glr-tag{
+  display:inline-block;
+  margin-bottom:10px;
+  font-size:11px;
+  letter-spacing:.6px;
+  text-transform:uppercase;
+  padding:5px 14px;
+  background:#e7f1f4;
+  color:var(--glr-accent);
+}
+
+/* GRID SPANS */
+.span-40{ grid-column:span 4; }
+.span-60{ grid-column:span 6; }
+
+/* MOBILE */
+@media(max-width:768px){
+  .glr-asymmetric-grid{
+    grid-template-columns:1fr;
+  }
+  .span-40,.span-60{
+    grid-column:span 1;
+  }
+}
+</style>
+
+<section class="glass-line-section" style="background:var(--glr-bg);">
+  <div class="glass-line-wrap">
+    <h2 class="glass-line-heading">Types of Glass-Lined Reactors</h2>
+
+    <div class="glr-asymmetric-grid">
+
+      <!-- ROW 1 : 40 / 60 -->
+      <div class="glr-type-card span-40">
+        <div class="glr-img">
+          <img src="assets/img/bannerlast.png">
+        </div>
+        <div class="glr-content">
+          <span class="glr-tag">Batch Processing</span>
+          <h4>Standard Glass-Lined Reactor</h4>
+          <p>Ideal for pharmaceutical and chemical batch reactions ensuring corrosion resistance and product purity.</p>
+        </div>
+      </div>
+
+      <div class="glr-type-card span-60">
+        <div class="glr-img">
+          <img src="assets/img/bannerlast.png">
+        </div>
+        <div class="glr-content">
+          <span class="glr-tag">Thermal Control</span>
+          <h4>Jacketed Glass-Lined Reactor</h4>
+          <p>Engineered for precise temperature regulation using heating or cooling media across reaction cycles.</p>
+        </div>
+      </div>
+
+      <!-- ROW 2 : 60 / 40 -->
+      <div class="glr-type-card span-60">
+        <div class="glr-img">
+          <img src="assets/img/bannerlast.png">
+        </div>
+        <div class="glr-content">
+          <span class="glr-tag">High Heat Transfer</span>
+          <h4>Limpet / Half-Coil Reactor</h4>
+          <p>Designed for viscous, exothermic reactions requiring rapid and uniform heat dissipation.</p>
+        </div>
+      </div>
+
+      <div class="glr-type-card span-40">
+        <div class="glr-img">
+          <img src="assets/img/bannerlast.png">
+        </div>
+        <div class="glr-content">
+          <span class="glr-tag">Pressure Rated</span>
+          <h4>Pressure & Vacuum Reactor</h4>
+          <p>Built for safe operation under high pressure and deep vacuum conditions.</p>
+        </div>
+      </div>
+
+      <!-- ROW 3 : 40 / 60 -->
+      <div class="glr-type-card span-40">
+        <div class="glr-img">
+          <img src="assets/img/bannerlast.png">
+        </div>
+        <div class="glr-content">
+          <span class="glr-tag">Advanced Mixing</span>
+          <h4>Agitated Glass-Lined Reactor</h4>
+          <p>Uniform mixing with anchor, turbine, or retreat-curve agitators.</p>
+        </div>
+      </div>
+
+      <div class="glr-type-card span-60">
+        <div class="glr-img">
+          <img src="assets/img/bannerlast.png">
+        </div>
+        <div class="glr-content">
+          <span class="glr-tag">R&D Scale</span>
+          <h4>Pilot / Lab Scale Reactor</h4>
+          <p>Optimized for process development, scale-up trials, and research applications.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+   <!-- TYPES end-->
+
+      <!-- FEATURES -->
+<section class="glass-line-section glass-line-features-icon">
+  <div class="glass-line-wrap">
+    <h2 class="glass-line-heading">Key Features & Advantages</h2>
+
+    <div class="glass-line-features">
+      <div class="glass-line-feature">
+        <i class="bi bi-droplet-half"></i>
+        <span>Superior corrosion resistance against acids & solvents</span>
+      </div>
+
+      <div class="glass-line-feature">
+        <i class="bi bi-slash-circle"></i>
+        <span>Zero metal ion contamination</span>
+      </div>
+
+      <div class="glass-line-feature">
+        <i class="bi bi-brush"></i>
+        <span>Smooth, non-porous surface for easy cleaning</span>
+      </div>
+
+      <div class="glass-line-feature">
+        <i class="bi bi-thermometer-half"></i>
+        <span>High thermal shock resistance</span>
+      </div>
+
+      <div class="glass-line-feature">
+        <i class="bi bi-clock-history"></i>
+        <span>Long service life with minimal maintenance</span>
+      </div>
+
+      <div class="glass-line-feature">
+        <i class="bi bi-shield-check"></i>
+        <span>GMP-compliant and regulatory-ready</span>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+    .glass-line-features-icon .glass-line-features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
+  margin-top:30px;
+}
+
+.glass-line-features-icon .glass-line-feature{
+  background:#eef3f5;
+  border-left:4px solid #1f7a8c;
+  padding:18px 20px;
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  border-radius:8px;
+  transition:all 0.3s ease;
+  cursor:pointer;
+}
+
+.glass-line-features-icon .glass-line-feature i{
+  font-size:24px;
+  color:#1f7a8c;
+  flex-shrink:0;
+  transition:transform 0.3s ease;
+}
+
+.glass-line-features-icon .glass-line-feature span{
+  font-size:15px;
+  color:#0d1b22;
+  line-height:1.6;
+}
+
+.glass-line-features-icon .glass-line-feature:hover{
+  background:#dff3f7;
+}
+
+.glass-line-features-icon .glass-line-feature:hover i{
+  transform:scale(1.2);
+}
+
+</style>
+
+        <!-- SPECIFICATIONS -->
+        <section class="glass-line-section" style="background:#eef2f3;">
+            <div class="glass-line-wrap">
+                <h2 class="glass-line-heading">Technical Specifications</h2>
+
+                <table class="glass-line-table">
+                    <tr>
+                        <td>Capacity Range</td>
+                        <td>5 L – 50,000 L</td>
+                    </tr>
+                    <tr>
+                        <td>Operating Pressure</td>
+                        <td>Full Vacuum to High Pressure</td>
+                    </tr>
+                    <tr>
+                        <td>Operating Temperature</td>
+                        <td>-60°C to +200°C</td>
+                    </tr>
+                    <tr>
+                        <td>Glass Thickness</td>
+                        <td>1.5 – 2.5 mm</td>
+                    </tr>
+                    <tr>
+                        <td>Standards</td>
+                        <td>GMP / ASME / DIN</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- APPLICATIONS starts -->
+      <section class="glass-line-section glass-line-apps-section">
+  <div class="glass-line-wrap">
+
+    <h2 class="glass-line-heading text-center">
+      Applications & Industries
+    </h2>
+
+    <p class="glass-line-subtext">
+      Trusted across diverse industries for corrosion-resistant, high-purity, and
+      mission-critical chemical processing.
+    </p>
+
+    <div class="glass-line-apps-grid">
+
+      <div class="glass-line-app-card">
+        <span>01</span>
+        <h4>Pharmaceutical & API</h4>
+        <p>GMP-compliant reactors for high-purity drug and API manufacturing.</p>
+      </div>
+
+      <div class="glass-line-app-card">
+        <span>02</span>
+        <h4>Fine & Specialty Chemicals</h4>
+        <p>Safe handling of corrosive and high-value chemical reactions.</p>
+      </div>
+
+      <div class="glass-line-app-card">
+        <span>03</span>
+        <h4>Agrochemicals</h4>
+        <p>Durable systems for pesticide and fertilizer intermediates.</p>
+      </div>
+
+      <div class="glass-line-app-card">
+        <span>04</span>
+        <h4>Dyes & Pigments</h4>
+        <p>Color-critical processing with zero metal contamination.</p>
+      </div>
+
+      <div class="glass-line-app-card">
+        <span>05</span>
+        <h4>R&D & Pilot Plants</h4>
+        <p>Reliable scale-up support from lab to commercial production.</p>
+      </div>
+
+      <div class="glass-line-app-card">
+        <span>06</span>
+        <h4>Custom Chemical Synthesis</h4>
+        <p>Flexible reactor configurations for complex synthesis routes.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+    .glass-line-apps-section{
+  background:#ffffff;
+}
+
+.glass-line-subtext{
+  max-width:720px;
+  margin:10px auto 40px;
+  text-align:center;
+  font-size:15px;
+  color:#6e7b85;
+  line-height:1.6;
+}
+
+.glass-line-apps-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.glass-line-app-card{
+  background:#f4f7f9;
+  padding:32px 28px;
+  border-radius:14px;
+  position:relative;
+  transition:all .35s ease;
+  border:1px solid #e2e6ea;
+}
+
+.glass-line-app-card span{
+  position:absolute;
+  top:20px;
+  right:22px;
+  font-size:32px;
+  font-weight:800;
+  color:#d9dee3;
+}
+
+.glass-line-app-card h4{
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:10px;
+  color:#0d1b22;
+}
+
+.glass-line-app-card p{
+  font-size:14px;
+  color:#6e7b85;
+  line-height:1.6;
+}
+
+/* Hover Effect – clean & professional */
+.glass-line-app-card:hover{
+  background:#ffffff;
+  transform:translateY(-6px);
+  box-shadow:0 18px 35px rgba(0,0,0,.12);
+  border-color:#1f7a8c;
+}
+
+.glass-line-app-card:hover span{
+  color:#1f7a8c;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .glass-line-subtext{
+    font-size:14px;
+    padding:0 10px;
+  }
+}
+
+</style>
+     <!-- APPLICATIONS starts -->
+        <!-- CTA -->
+        <section class="glass-line-section glass-line-cta">
+            <div class="glass-line-wrap">
+                <h2 class="glass-line-heading text-white">Complete Glass-Lined Reactor Solutions</h2>
+                <p>Design, supply, installation, maintenance, and lifecycle support.</p>
+                <a href="#">Request Technical Consultation</a>
+            </div>
+        </section>
+
+
+
+    </main>
+
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+
+
+
+
+    <!-- FOOTER START -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img src="assets/img/logos.png" alt="Company Logo">
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <p>
+                    <a href="mailto:anasahmedreactorcare@gmail.com">
+                        anasahmedreactorcare@gmail.com
+                    </a>
+                </p>
+                <p>Hyderabad, Telangana</p>
+                <p>
+                    <a href="tel:+919550219901">
+                        +91 9550219901
+                    </a>
+                </p>
+            </div>
+
+            <!-- Social + Button -->
+            <div class="footer-actions">
+
+                <div class="social-icons">
+                    <!-- Facebook -->
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V11h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12z" />
+                        </svg>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm4.8-2.3a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z" />
+                        </svg>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.6h.1a4.2 4.2 0 0 1 3.8-2c4 0 4.7 2.6 4.7 6v6H17v-5.3c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <a href="mailto:anasahmedreactorcare@gmail.com" class="contact-btn">
+                    Contact Us
+                </a>
+
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Footer Base */
+        .footer {
+            background: #111;
+            color: #fff;
+            padding: 35px 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Layout */
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Logo */
+        .footer-logo img {
+            max-width: 140px;
+        }
+
+        /* Contact */
+        .footer-contact {
+            text-align: start;
+            font-size: 14px;
+        }
+
+        .footer-contact p {
+            margin: 6px 0;
+        }
+
+        .footer-contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Actions */
+        .footer-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .social-icons svg {
+            width: 22px;
+            height: 22px;
+            fill: #fff;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-icons a:hover svg {
+            opacity: 0.7;
+        }
+
+        /* Button */
+        .contact-btn {
+            padding: 8px 20px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .contact-btn:hover {
+            background: #fff;
+            color: #111;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: start;
+            }
+        }
+    </style>
+    <!-- FOOTER END -->
+
+</body>
+
+</html>

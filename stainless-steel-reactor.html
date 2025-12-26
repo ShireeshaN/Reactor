@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Starter Page - MinimalFolio Bootstrap Template</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: MinimalFolio
+  * Template URL: https://bootstrapmade.com/minimalfolio-bootstrap-portfolio-template/
+  * Updated: Aug 05 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="starter-page-page">
+
+    <header id="header" class="header d-flex align-items-center ">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <img class="logoos" src="assets/img/logos1.png" alt="">
+                <!-- <h1 class="sitename text-white">ARTIEA</h1> -->
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown"><a href="#"><span>Services</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="glass-lined-reactor.html">Glass-Lined Reactors</a></li>
+                            <li><a href="stainless-steel-reactor.html">Stainless Steel Reactors</a></li>
+                            <li><a href="high-pressure-reactor.html">High-Pressure Reactors (Autoclaves)</a></li>
+                            <li><a href="hastelloy-reactor.html">Hastelloy® Reactors</a></li>
+                            <li><a href="biocreator-fermenters.html">Bioreactors / Fermenters</a></li>
+                            <li><a href="jacketed-reactor-vessels.html">Jacketed Reactor Vessels</a></li>
+                            <li><a href="single-use-reactor.html">Single-Use Reactors</a></li>
+                            <li><a href="continuous-flow-reactor.html">Continuous Flow Reactors</a></li>
+                            <li><a href="reactor-maintenance.html">Reactor Maintenance &amp; Servicing</a></li>
+                            <li><a href="reactor-buy-back-program.html">Reactor Buy-Back Program</a></li>
+                            <li><a href="reactorcare-verified-system.html">ReactorCare™ Verified Systems</a></li>
+                            <li><a href="process-plant-setup-integration.html">Process Plant Setup &amp; Integration</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="main">
+
+
+   <!-- Starter Section Section -->
+<section id="starter-section" class="starter-section section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2 style="font-size:42px; font-weight:800; letter-spacing:1px;">
+            Stainless Steel Reactor
+        </h2>
+        <p style="font-size:16px; font-weight:600; max-width:720px; margin:auto; opacity:0.9;">
+            Precision-engineered stainless steel reactors offering superior mechanical strength, 
+            corrosion resistance, and long-term reliability for pharmaceutical, chemical, and 
+            industrial processes.
+        </p>
+    </div><!-- End Section Title -->
+
+</section>
+<!-- /Starter Section Section -->
+
+
+
+       <!-- STAINLESS STEEL REACTOR ANIMATED BANNER -->
+<section class="banner-section ssr-banner">
+    <div class="banner" id="banner">
+        <img id="banner-img" src="assets/img/banner2.png" alt="Stainless Steel Reactor">
+
+        <div class="overlay">
+            <h1 id="banner-title">Stainless Steel Reactors</h1>
+            <p id="banner-tag">
+                High-performance stainless steel reactors for chemical, pharmaceutical, and food processing industries.
+            </p>
+        </div>
+
+        <div class="slices" id="slices"></div>
+    </div>
+</section>
+
+<style>
+    /* ================= BANNER BASE ================= */
+    .ssr-banner {
+        background: #ffffff;
+    }
+
+    .banner-section {
+        width: 100%;
+        height: 90vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.75);
+    }
+
+    /* ================= OVERLAY ================= */
+    .overlay {
+        position: absolute;
+        bottom: 80px;
+        left: 60px;
+        color: #ffffff;
+        z-index: 10;
+        max-width: 620px;
+    }
+
+    .overlay h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    .overlay p {
+        font-size: 1.15rem;
+        opacity: 0.9;
+        line-height: 1.6;
+    }
+
+    /* ================= SLICE ANIMATION ================= */
+    .slices {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        z-index: 5;
+    }
+
+    .slice {
+        flex: 1;
+        background: #ffffff;
+        transform: translateY(0%);
+        transition: transform 1.4s ease-in-out;
+    }
+
+    .slice.hide {
+        transform: translateY(-100%);
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width:1024px) {
+        .overlay {
+            bottom: 60px;
+            left: 40px;
+        }
+
+        .overlay h1 {
+            font-size: 2.4rem;
+        }
+
+        .overlay p {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width:768px) {
+        .banner-section {
+            height: 70vh;
+        }
+
+        .overlay {
+            bottom: 40px;
+            left: 30px;
+        }
+
+        .overlay h1 {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width:480px) {
+        .banner-section {
+            height: 60vh;
+        }
+
+        .overlay {
+            bottom: 25px;
+            left: 20px;
+        }
+
+        .overlay h1 {
+            font-size: 1.6rem;
+        }
+
+        .overlay p {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+<script>
+    const images = [
+        {
+            url: "assets/img/banner2.png",
+            title: "Stainless Steel Reactors",
+            tag: "High-performance stainless steel reactors for chemical, pharmaceutical, and food processing industries."
+        },
+        {
+            url: "assets/img/banner2.png",
+            title: "Pharmaceutical Grade Design",
+            tag: "GMP-compliant stainless steel reactors ensuring product safety and integrity."
+        },
+        {
+            url: "assets/img/banner2.png",
+            title: "Custom Fabrication",
+            tag: "Tailor-made designs to fit your process and operational requirements."
+        },
+        {
+            url: "assets/img/banner2.png",
+            title: "Pressure & Temperature Control",
+            tag: "Engineered for safe operation under varying pressure and temperature conditions."
+        },
+        {
+            url: "assets/img/banner2.png",
+            title: "End-to-End Solutions",
+            tag: "Design, supply, installation, maintenance, and lifecycle support for reactors."
+        }
+    ];
+
+    const bannerImg = document.getElementById("banner-img");
+    const slicesContainer = document.getElementById("slices");
+    const title = document.getElementById("banner-title");
+    const tag = document.getElementById("banner-tag");
+
+    let current = 0;
+    const sliceCount = 12;
+
+    function createSlices() {
+        slicesContainer.innerHTML = "";
+        for (let i = 0; i < sliceCount; i++) {
+            const div = document.createElement("div");
+            div.classList.add("slice");
+            slicesContainer.appendChild(div);
+        }
+    }
+
+    function animateSlices() {
+        const slices = document.querySelectorAll(".slice");
+        slices.forEach((slice, index) => {
+            setTimeout(() => {
+                slice.classList.add("hide");
+            }, index * 110);
+        });
+    }
+
+    function changeSlide() {
+        current = (current + 1) % images.length;
+        const item = images[current];
+        bannerImg.src = item.url;
+        title.textContent = item.title;
+        tag.textContent = item.tag;
+
+        createSlices();
+        setTimeout(animateSlices, 50);
+    }
+
+    createSlices();
+    animateSlices();
+    setInterval(changeSlide, 8000);
+</script>
+
+<!-- neww start-->
+<!-- ================= STAINLESS STEEL REACTOR SECTION ================= -->
+
+<section class="ssr-section">
+
+
+
+  <!-- INTRO -->
+  <div class="ssr-container ssr-intro">
+    <div class="ssr-text">
+      <h2>What is a Stainless Steel Reactor?</h2>
+      <p>
+        Stainless Steel Reactors are robust process vessels designed for mixing, heating,
+        cooling and chemical reactions under controlled conditions. Manufactured using
+        SS 304 / SS 316 / SS 316L, they offer excellent mechanical strength, hygiene and
+        long operational life.
+      </p>
+    </div>
+    <div class="ssr-image">
+      <img src="assets/img/banner2.png" alt="SS Reactor">
+    </div>
+  </div>
+
+  <!-- TYPES -->
+  <div class="ssr-container">
+    <h2 class="ssr-title">Types of Stainless Steel Reactors</h2>
+
+    <div class="ssr-grid">
+
+      <div class="ssr-card">
+        <img src="assets/img/banner2.png">
+        <h4>Jacketed Reactor</h4>
+        <p>Precise heating & cooling using steam, hot oil or chilled water.</p>
+      </div>
+
+      <div class="ssr-card">
+        <img src="assets/img/banner2.png">
+        <h4>Pressure Reactor</h4>
+        <p>Designed for high-pressure chemical reactions.</p>
+      </div>
+
+      <div class="ssr-card">
+        <img src="assets/img/banner2.png">
+        <h4>Vacuum Reactor</h4>
+        <p>Ideal for solvent recovery & low-temperature reactions.</p>
+      </div>
+
+      <div class="ssr-card">
+        <img src="assets/img/banner2.png">
+        <h4>Agitated Reactor</h4>
+        <p>Uniform mixing using anchor, turbine or paddle agitators.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="ssr-features-horizontal">
+  <h2 class="ssr-heading">Key Features & Advantages</h2>
+
+  <div class="ssr-feature-row">
+    <div class="ssr-feature-card">
+      <div class="icon">⚙️</div>
+      <h4>High Mechanical Strength</h4>
+      <p>Robust SS construction designed to withstand high pressure, temperature and continuous industrial operation.</p>
+    </div>
+
+    <div class="ssr-feature-card">
+      <div class="icon">🧪</div>
+      <h4>GMP & FDA Compliant</h4>
+      <p>Manufactured as per international pharmaceutical standards ensuring regulatory compliance.</p>
+    </div>
+
+    <div class="ssr-feature-card">
+      <div class="icon">🧼</div>
+      <h4>Hygienic & Easy Cleaning</h4>
+      <p>Mirror-finished internal surfaces prevent product sticking and allow effortless cleaning.</p>
+    </div>
+  </div>
+
+  <div class="ssr-feature-row">
+    <div class="ssr-feature-card">
+      <div class="icon">🔄</div>
+      <h4>CIP / SIP Compatible</h4>
+      <p>Supports Clean-in-Place and Sterilize-in-Place systems for maximum process efficiency.</p>
+    </div>
+
+    <div class="ssr-feature-card">
+      <div class="icon">⏳</div>
+      <h4>Long Service Life</h4>
+      <p>Corrosion-resistant stainless steel ensures durability with minimal maintenance.</p>
+    </div>
+
+    <div class="ssr-feature-card">
+      <div class="icon">🛠️</div>
+      <h4>Custom Fabrication</h4>
+      <p>Available in SS 304, 316, 316L with customized capacity, agitator & nozzle design.</p>
+    </div>
+  </div>
+</div>
+<style>
+    .ssr-features-horizontal {
+  padding: 70px 40px;
+  background: #0b0f14;
+  color: #ffffff;
+}
+
+.ssr-heading {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+}
+
+.ssr-feature-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.ssr-feature-card {
+  flex: 1;
+  background: linear-gradient(145deg, #111820, #0b0f14);
+  border: 1px solid #1f2a36;
+  padding: 35px 30px;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.ssr-feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-left: 4px solid #2fa4ff;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.ssr-feature-card:hover::before {
+  opacity: 1;
+}
+
+.ssr-feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(47, 164, 255, 0.25);
+}
+
+.ssr-feature-card .icon {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.ssr-feature-card h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #2fa4ff;
+}
+
+.ssr-feature-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ssr-feature-row {
+    flex-direction: column;
+  }
+}
+
+</style>
+
+  <!-- SPECIFICATIONS -->
+  <div class="ssr-container">
+    <h2 class="ssr-title">Technical Specifications</h2>
+
+    <table class="ssr-table">
+      <tr><td>Capacity</td><td>50 L – 100,000 L</td></tr>
+      <tr><td>Material</td><td>SS 304 / SS 316 / SS 316L</td></tr>
+      <tr><td>Pressure</td><td>Full Vacuum to High Pressure</td></tr>
+      <tr><td>Temperature</td><td>-40°C to +250°C</td></tr>
+      <tr><td>Finish</td><td>Mirror / Matte / Electro Polish</td></tr>
+    </table>
+  </div>
+
+  <!-- APPLICATIONS -->
+ <!-- ================= APPLICATIONS & INDUSTRIES ================= -->
+
+<section class="ssr-apps-pro">
+  <div class="ssr-apps-container">
+
+    <h2 class="ssr-apps-title">Applications & Industries</h2>
+    <p class="ssr-apps-subtitle">
+      Stainless Steel Reactors are trusted across multiple industries for hygienic,
+      pressure-rated and precision-controlled chemical processing.
+    </p>
+
+    <div class="ssr-apps-grid">
+
+      <!-- CARD 1 -->
+      <div class="ssr-app-card">
+        <div class="ssr-app-icon">
+          <i class="bi bi-capsule"></i>
+        </div>
+        <h4>Pharmaceutical & API</h4>
+        <p>
+          GMP-compliant reactors for drug formulation, API synthesis,
+          solvent recovery and sterile processing.
+        </p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="ssr-app-card">
+        <div class="ssr-app-icon">
+          <i class="bi bi-flask"></i>
+        </div>
+        <h4>Chemical Processing</h4>
+        <p>
+          Reliable systems for batch and continuous reactions involving
+          acids, solvents and intermediates.
+        </p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="ssr-app-card">
+        <div class="ssr-app-icon">
+          <i class="bi bi-cup-hot"></i>
+        </div>
+        <h4>Food & Beverage</h4>
+        <p>
+          Hygienic reactors for fermentation, flavor processing,
+          syrups, enzymes and food-grade chemicals.
+        </p>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="ssr-app-card">
+        <div class="ssr-app-icon">
+          <i class="bi bi-droplet"></i>
+        </div>
+        <h4>Cosmetics & Personal Care</h4>
+        <p>
+          Precision mixing for creams, lotions, gels and
+          contamination-sensitive formulations.
+        </p>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="ssr-app-card">
+        <div class="ssr-app-icon">
+          <i class="bi bi-graph-up-arrow"></i>
+        </div>
+        <h4>R&D & Pilot Plants</h4>
+        <p>
+          Lab-scale and pilot reactors supporting process development,
+          scale-up trials and innovation.
+        </p>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="ssr-app-card">
+        <div class="ssr-app-icon">
+          <i class="bi bi-gear-wide-connected"></i>
+        </div>
+        <h4>Custom Chemical Synthesis</h4>
+        <p>
+          Tailor-made reactor configurations for complex reactions,
+          specialty chemicals and niche processes.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+    /* ================= APPLICATIONS – PRO ================= */
+
+.ssr-apps-pro{
+  background:#eef2f3;
+  padding:90px 20px;
+  font-family:'Raleway', sans-serif;
+}
+
+.ssr-apps-container{
+  max-width:1200px;
+  margin:auto;
+  text-align:center;
+}
+
+.ssr-apps-title{
+  font-size:34px;
+  font-weight:700;
+  color:#0d1b22;
+  margin-bottom:10px;
+}
+
+.ssr-apps-subtitle{
+  max-width:760px;
+  margin:0 auto 55px;
+  font-size:15px;
+  line-height:1.7;
+  color:#6e7b85;
+}
+
+/* GRID */
+.ssr-apps-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+/* CARD */
+.ssr-app-card{
+  background:#ffffff;
+  padding:40px 30px;
+  position:relative;
+  box-shadow:0 14px 35px rgba(0,0,0,.1);
+  transition:all .45s ease;
+  overflow:hidden;
+}
+
+/* LEFT ACCENT BAR */
+.ssr-app-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background:#1f7a8c;
+  transform:scaleY(0);
+  transition:.45s ease;
+}
+
+.ssr-app-card:hover::before{
+  transform:scaleY(1);
+}
+
+/* ICON */
+.ssr-app-icon{
+  width:60px;
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#e6f3f6;
+  margin-bottom:22px;
+  transition:.4s ease;
+}
+
+.ssr-app-icon i{
+  font-size:28px;
+  color:#1f7a8c;
+}
+
+/* TEXT */
+.ssr-app-card h4{
+  font-size:18px;
+  font-weight:600;
+  color:#0d1b22;
+  margin-bottom:10px;
+}
+
+.ssr-app-card p{
+  font-size:14px;
+  line-height:1.7;
+  color:#6e7b85;
+}
+
+/* HOVER EFFECT */
+.ssr-app-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 26px 55px rgba(0,0,0,.18);
+}
+
+.ssr-app-card:hover .ssr-app-icon{
+  background:#1f7a8c;
+}
+
+.ssr-app-card:hover .ssr-app-icon i{
+  color:#ffffff;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .ssr-apps-title{
+    font-size:28px;
+  }
+  .ssr-apps-subtitle{
+    font-size:14px;
+    padding:0 10px;
+  }
+}
+
+</style>
+
+</section>
+
+<!-- ================= CSS ================= -->
+<style>
+.ssr-section{
+  font-family: 'Raleway', sans-serif;
+  color:#0d1b22;
+}
+
+/* HERO */
+.ssr-hero{
+  position:relative;
+  height:90vh;
+}
+.ssr-hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.ssr-hero-overlay{
+  position:absolute;
+  bottom:70px;
+  left:60px;
+  color:#fff;
+  max-width:600px;
+}
+.ssr-hero-overlay h1{
+  font-size:48px;
+  font-weight:800;
+}
+.ssr-hero-overlay p{
+  font-size:18px;
+  opacity:.9;
+}
+
+/* CONTAINER */
+.ssr-container{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+}
+
+/* INTRO */
+.ssr-intro{
+  display:flex;
+  gap:50px;
+  align-items:center;
+}
+.ssr-image img{
+  width:100%;
+  border-radius:12px;
+}
+
+/* TITLES */
+.ssr-title{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:40px;
+}
+
+/* GRID */
+.ssr-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.ssr-card{
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
+  transition:.4s;
+}
+.ssr-card:hover{
+  transform:translateY(-8px);
+}
+.ssr-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+.ssr-card h4{
+  padding:18px 18px 8px;
+}
+.ssr-card p{
+  padding:0 18px 22px;
+  font-size:14px;
+  color:#6e7b85;
+}
+
+/* FEATURES */
+.ssr-features{
+  background:#0d1b22;
+  color:#fff;
+  padding:80px 20px;
+  text-align:center;
+}
+.ssr-features-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:40px;
+}
+.feature{
+  background:#1f7a8c;
+  padding:16px;
+  border-radius:8px;
+}
+
+/* TABLE */
+.ssr-table{
+  width:100%;
+  border-collapse:collapse;
+}
+.ssr-table td{
+  padding:14px;
+  border-bottom:1px solid #ddd;
+}
+
+/* APPS */
+.ssr-apps{
+  background:#eef2f3;
+  padding:80px 20px;
+  text-align:center;
+}
+.ssr-app-grid{
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+.ssr-app-grid div{
+  background:#fff;
+  padding:24px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .ssr-intro{
+    flex-direction:column;
+  }
+  .ssr-hero-overlay{
+    left:20px;
+    bottom:40px;
+  }
+  .ssr-hero-overlay h1{
+    font-size:32px;
+  }
+}
+</style>
+
+
+<!-- new end -->
+<div class="ssr-cta-section">
+  <div class="ssr-cta-content">
+    <h2 class="text-white">Looking for a Reliable Stainless Steel Reactor?</h2>
+    <p>
+      Get precision-engineered stainless steel reactors designed for pharmaceutical,
+      chemical, food, and industrial applications. Built to international standards
+      with customized configurations.
+    </p>
+
+    <div class="ssr-cta-buttons">
+      <a href="#" class="ssr-btn primary">Request a Quote</a>
+      <a href="#" class="ssr-btn secondary">Talk to Our Experts</a>
+    </div>
+  </div>
+</div>
+<style>
+    .ssr-cta-section {
+  padding: 90px 40px;
+  background: linear-gradient(135deg, #0b0f14, #111820);
+  border-top: 1px solid #1f2a36;
+  border-bottom: 1px solid #1f2a36;
+}
+
+.ssr-cta-content {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  color: #ffffff;
+}
+
+.ssr-cta-content h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.ssr-cta-content p {
+  font-size: 16px;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.ssr-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.ssr-btn {
+  padding: 16px 38px;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.35s ease;
+  border: 1px solid transparent;
+}
+
+.ssr-btn.primary {
+  background: #2fa4ff;
+  color: #0b0f14;
+}
+
+.ssr-btn.primary:hover {
+  background: transparent;
+  color: #2fa4ff;
+  border: 1px solid #2fa4ff;
+}
+
+.ssr-btn.secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.ssr-btn.secondary:hover {
+  background: #ffffff;
+  color: #0b0f14;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ssr-cta-content h2 {
+    font-size: 28px;
+  }
+
+  .ssr-cta-content p {
+    font-size: 14px;
+  }
+}
+
+</style>
+    </main>
+
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+
+
+
+
+    <!-- FOOTER START -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img src="assets/img/logos.png" alt="Company Logo">
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <p>
+                    <a href="mailto:anasahmedreactorcare@gmail.com">
+                        anasahmedreactorcare@gmail.com
+                    </a>
+                </p>
+                <p>Hyderabad, Telangana</p>
+                <p>
+                    <a href="tel:+919550219901">
+                        +91 9550219901
+                    </a>
+                </p>
+            </div>
+
+            <!-- Social + Button -->
+            <div class="footer-actions">
+
+                <div class="social-icons">
+                    <!-- Facebook -->
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V11h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12z" />
+                        </svg>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm4.8-2.3a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z" />
+                        </svg>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.6h.1a4.2 4.2 0 0 1 3.8-2c4 0 4.7 2.6 4.7 6v6H17v-5.3c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <a href="mailto:anasahmedreactorcare@gmail.com" class="contact-btn">
+                    Contact Us
+                </a>
+
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Footer Base */
+        .footer {
+            background: #111;
+            color: #fff;
+            padding: 35px 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Layout */
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Logo */
+        .footer-logo img {
+            max-width: 140px;
+        }
+
+        /* Contact */
+        .footer-contact {
+            text-align: start;
+            font-size: 14px;
+        }
+
+        .footer-contact p {
+            margin: 6px 0;
+        }
+
+        .footer-contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Actions */
+        .footer-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .social-icons svg {
+            width: 22px;
+            height: 22px;
+            fill: #fff;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-icons a:hover svg {
+            opacity: 0.7;
+        }
+
+        /* Button */
+        .contact-btn {
+            padding: 8px 20px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .contact-btn:hover {
+            background: #fff;
+            color: #111;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: start;
+            }
+        }
+    </style>
+    <!-- FOOTER END -->
+
+</body>
+
+</html>
