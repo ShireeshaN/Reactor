@@ -596,6 +596,7 @@
   background:#eef2f3;
   padding:90px 20px;
   font-family:'Raleway', sans-serif;
+  margin-bottom: 0px;
 }
 
 .ssr-apps-container{
@@ -864,6 +865,157 @@
   }
 }
 </style>
+
+
+
+
+<!-- Stainless Steel Equipment Carousel -->
+<div class="stains">
+  <div class="stains-container">
+    <button class="prev">&#10094;</button>
+    <div class="stains-wrapper">
+      <div class="stains-slide">
+        <img src="assets/img/banner1.png" alt="Stainless Steel Equipment">
+        <div class="stains-text">Stainless Steel Equipment</div>
+      </div>
+      <div class="stains-slide">
+        <img src="assets/img/banner2.png" alt="Stainless Steel Reactors">
+        <div class="stains-text">Stainless Steel Reactors</div>
+      </div>
+      <div class="stains-slide">
+        <img src="assets/img/banner1.png" alt="Stainless Steel Storage Tanks">
+        <div class="stains-text">Stainless Steel Storage Tanks</div>
+      </div>
+      <div class="stains-slide">
+        <img src="assets/img/banner2.png" alt="Stainless Steel Filters">
+        <div class="stains-text">Stainless Steel Filters</div>
+      </div>
+      <div class="stains-slide">
+        <img src="assets/img/banner1.png" alt="Stainless Steel Heat Exchangers">
+        <div class="stains-text">Stainless Steel Heat Exchangers</div>
+      </div>
+      <div class="stains-slide">
+        <img src="assets/img/banner2.png" alt="Stainless Steel Glass-Lined Equipments">
+        <div class="stains-text">Stainless Steel Glass-Lined Equipments</div>
+      </div>
+      <div class="stains-slide">
+        <img src="assets/img/banner1.png" alt="Other Stainless Steel Equipments">
+        <div class="stains-text">Other Stainless Steel Equipments</div>
+      </div>
+    </div>
+    <button class="next">&#10095;</button>
+  </div>
+</div>
+
+<style>
+/* Carousel Div */
+.stains {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+}
+
+.stains-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.stains-wrapper {
+  display: flex;
+  transition: transform 0.6s ease;
+  height: 100%;
+}
+
+.stains-slide {
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.stains-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slide Text Overlay */
+.stains-text {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  max-width: 80%;
+}
+
+@media (max-width:1024px) {
+  .stains-text { font-size: 1.8rem; left: 40px; bottom: 40px; }
+}
+
+@media (max-width:768px) {
+  .stains-text { font-size: 1.4rem; left: 30px; bottom: 30px; }
+}
+
+@media (max-width:480px) {
+  .stains-text { font-size: 1.1rem; left: 20px; bottom: 20px; }
+}
+
+/* Minimal Arrows */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: #2fa4ff;
+  font-size: 2.5rem;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  z-index: 10;
+  transition: color 0.3s;
+}
+
+.prev:hover, .next:hover {
+  color: #1a82cc;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+</style>
+
+<script>
+const wrapper = document.querySelector('.stains-wrapper');
+const slides = document.querySelectorAll('.stains-slide');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+let index = 0;
+
+function showSlide(i) {
+  if(i < 0) index = slides.length - 1;
+  else if(i >= slides.length) index = 0;
+  else index = i;
+  wrapper.style.transform = `translateX(${-index * 100}%)`;
+}
+
+// Arrow click
+prev.addEventListener('click', () => showSlide(index - 1));
+next.addEventListener('click', () => showSlide(index + 1));
+
+// Auto-slide
+setInterval(() => showSlide(index + 1), 5000); // 5 sec per slide
+</script>
+
 
 
 <!-- new end -->
