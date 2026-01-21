@@ -374,6 +374,28 @@ h6 {
 }
 
 
+/* ===== SOCIAL MEDIA – TOP LEFT (CONTACT OPPOSITE) ===== */
+.desktop-social {
+  position: absolute;
+  top: 35px;        /* contact same height */
+  left: 70px;       /* banner left padding */
+  display: flex;
+  gap: 18px;
+  z-index: 1000;
+}
+
+.desktop-social a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.desktop-social a:hover {
+  color: #fff;
+  transform: translateY(-2px) scale(1.05);
+}
+
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
