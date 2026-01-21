@@ -32,43 +32,67 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center ">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+ <header id="header" class="header banner-header">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img class="logoos" src="assets/img/logos.png" alt="">
-      
-      </a>
+  <!-- Desktop Header -->
+  <div class="desktop-header d-none d-xl-flex">
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-           <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-             <li><a href="glass-lined-reactor.html">Glass-Lined Reactors</a></li>
-  <li><a href="stainless-steel-reactor.html">Stainless Steel Reactors</a></li>
-  <li><a href="high-pressure-reactor.html">High-Pressure Reactors (Autoclaves)</a></li>
-  <li><a href="hastelloy-reactor.html">Hastelloy® Reactors</a></li>
-  <li><a href="biocreator-fermenters.html">Bioreactors / Fermenters</a></li>
-  <li><a href="jacketed-reactor-vessels.html">Jacketed Reactor Vessels</a></li>
-   <li><a href="single-use-reactor.html">Single-Use Reactors</a></li>
-  <li><a href="continuous-flow-reactor.html">Continuous Flow Reactors</a></li>
-  <li><a href="reactor-maintenance.html">Reactor Maintenance &amp; Servicing</a></li>
-  <li><a href="reactor-buy-back-program.html">Reactor Buy-Back Program</a></li>
-
-            </ul>
-          </li>
-         
-            
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
+    <!-- Contact Button -->
+    <div class="desktop-contact">
+      <a href="contact.html" class="contact-btn">Contact</a>
     </div>
-  </header>
+
+    <!-- Center Logo -->
+    <div class="desktop-logo">
+      <img src="assets/img/logos.png" alt="Logo">
+    </div>
+
+    <!-- Menu -->
+    <nav class="desktop-menu">
+      <ul class="menu-line-1">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+
+        <li class="has-dropdown">
+          <a href="#">Services</a>
+          <ul class="dropdown">
+            <li><a href="#">Reactor Maintenance & Services</a></li>
+            <li><a href="#">Reactor Buy & Develop Program</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Industry We Serve</a></li>
+      </ul>
+
+      <ul class="menu-line-2">
+
+        <li><a href="about.html">Reactor Maintenance & Services</a></li>
+<li><a href="about.html">Reactor Buy & Develop Program</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <!-- MOBILE HEADER (UNCHANGED) -->
+  <nav id="navmenu" class="navmenu d-xl-none">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <ul>
+          <li><a href="#">Glass Lined Reactors</a></li>
+          <li><a href="#">Stainless Steel Reactors</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <i class="mobile-nav-toggle bi bi-list"></i>
+  </nav>
+
+</header>
+
 
 <main class="main">
 
@@ -141,15 +165,16 @@
 .slide-4 { background-image: url("assets/img/banners/3.png"); }
 
 /* ================= CONTENT ================= */
-.banner-content {
-  position: absolute;
-  top: 50%;
-  left: 8%;
-  transform: translateY(-50%);
-  max-width: 560px;
-  z-index: 2;
-  color: #fff;
-}
+ .banner-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+  }
 
 .title {
   font-size: 3.4rem;
@@ -157,7 +182,7 @@
   line-height: 1.1;
   margin-bottom: 18px;
   transition: opacity 0.6s ease;
-  color :white;
+  color :rgb(229, 226, 226);
 }
 
 .description {
@@ -165,6 +190,7 @@
   line-height: 1.6;
   opacity: 0.95;
   transition: opacity 0.6s ease;
+  color: #202020;
 }
 
 /* ================= MOBILE VIEW ================= */
