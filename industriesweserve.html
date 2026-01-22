@@ -91,13 +91,12 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2 style="font-size:42px; font-weight:800; letter-spacing:1px;">
-                    Reactor Maintenance & Servicing
+                 Industries We Serve
                 </h2>
                 <p style="font-size:16px; font-weight:600; max-width:720px; margin:auto; opacity:0.9;">
-                   At Reactor Care, we provide end-to-end reactor maintenance and technical services designed 
-to ensure safety, reliability, and long-term performance across all reactor types. Our expert 
-field teams and engineers support reactors throughout their entire lifecycle — from installation to 
-upgrades.
+                   At Reactor Care, we deliver specialized reactor services across multiple industries, supporting 
+a wide range of reactor technologies including glass-lined, stainless steel, high-pressure, alloy, 
+bioreactors, jacketed, single-use, and continuous flow reactors. 
                 </p>
             </div><!-- End Section Title -->
 
@@ -108,216 +107,6 @@ upgrades.
 
         <!-- GLASS LINED REACTOR ANIMATED BANNER -->
 
-        <section class="banner-section glass-line-banner">
-            <div class="banner" id="banner">
-                <img id="banner-img" src="assets/img/bans.png" alt="Glass Lined Reactor">
-
-                <div class="overlay">
-                    <h1 id="banner-title">Reactor Maintenance & Servicing</h1>
-                    <p id="banner-tag">
-                        Comprehensive maintenance solutions ensuring peak reactor performance, safety, and reliability
-                        for chemical, pharmaceutical, and biotech systems.
-                    </p>
-
-                </div>
-
-
-                <div class="slices" id="slices"></div>
-            </div>
-        </section>
-
-        <style>
-            /* ================= BANNER BASE ================= */
-            .glass-line-banner {
-                background: #ffffff;
-            }
-
-            .banner-section {
-                width: 100%;
-                height: 90vh;
-                position: relative;
-                overflow: hidden;
-            }
-
-            .banner {
-                position: relative;
-                width: 100%;
-                height: 100%;
-            }
-
-            .banner img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                filter: brightness(0.75);
-            }
-
-            /* ================= OVERLAY ================= */
-            .overlay {
-                position: absolute;
-                bottom: 80px;
-                left: 60px;
-                color: #ffffff;
-                z-index: 10;
-                max-width: 620px;
-            }
-
-            .overlay h1 {
-                font-size: 3rem;
-                font-weight: 700;
-                margin-bottom: 12px;
-                letter-spacing: 0.5px;
-            }
-
-            .overlay p {
-                font-size: 1.15rem;
-                opacity: 0.9;
-                line-height: 1.6;
-            }
-
-            /* ================= SLICE ANIMATION ================= */
-            .slices {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                z-index: 5;
-            }
-
-            .slice {
-                flex: 1;
-                background: #ffffff;
-                transform: translateY(0%);
-                transition: transform 1.4s ease-in-out;
-            }
-
-            .slice.hide {
-                transform: translateY(-100%);
-            }
-
-            /* ================= RESPONSIVE ================= */
-            @media (max-width:1024px) {
-                .overlay {
-                    bottom: 60px;
-                    left: 40px;
-                }
-
-                .overlay h1 {
-                    font-size: 2.4rem;
-                }
-
-                .overlay p {
-                    font-size: 1rem;
-                }
-            }
-
-            @media (max-width:768px) {
-                .banner-section {
-                    height: 70vh;
-                }
-
-                .overlay {
-                    bottom: 40px;
-                    left: 30px;
-                }
-
-                .overlay h1 {
-                    font-size: 2rem;
-                }
-            }
-
-            @media (max-width:480px) {
-                .banner-section {
-                    height: 60vh;
-                }
-
-                .overlay {
-                    bottom: 25px;
-                    left: 20px;
-                }
-
-                .overlay h1 {
-                    font-size: 1.6rem;
-                }
-
-                .overlay p {
-                    font-size: 0.9rem;
-                }
-            }
-        </style>
-
-        <script>
-            const images = [
-                {
-                    url: "assets/img/bans.png",
-                   title: "Reactor Maintenance & Servicing",
-            tag: "Comprehensive maintenance solutions ensuring optimal reactor performance, safety, and reliability."
-                },
-                {
-                    url: "assets/img/bannerlast.png",
-                  title: "Preventive Maintenance",
-            tag: "Scheduled inspections and routine servicing to prevent unexpected failures and maintain optimal performance."
-                },
-                {
-                    url: "assets/img/bannerlast.png",
-                    title: "Corrective Repairs",
-            tag: "Rapid troubleshooting and repair of mechanical, electrical, and control system issues."
-                },
-                {
-                    url: "assets/img/bannerlast.png",
-                    title: "Calibration & Testing",
-            tag: "Precision calibration of sensors, instruments, and control systems to ensure compliance and safety."
-    },
-                {
-                    url: "assets/img/bannerlast.png",
-                   title: "Lifecycle Support",
-            tag: "Expert guidance and support throughout the reactor’s operational life to maximize efficiency and longevity."
-                }
-            ];
-
-            const bannerImg = document.getElementById("banner-img");
-            const slicesContainer = document.getElementById("slices");
-            const title = document.getElementById("banner-title");
-            const tag = document.getElementById("banner-tag");
-
-            let current = 0;
-            const sliceCount = 12;
-
-            function createSlices() {
-                slicesContainer.innerHTML = "";
-                for (let i = 0; i < sliceCount; i++) {
-                    const div = document.createElement("div");
-                    div.classList.add("slice");
-                    slicesContainer.appendChild(div);
-                }
-            }
-
-            function animateSlices() {
-                const slices = document.querySelectorAll(".slice");
-                slices.forEach((slice, index) => {
-                    setTimeout(() => {
-                        slice.classList.add("hide");
-                    }, index * 110);
-                });
-            }
-
-            function changeSlide() {
-                current = (current + 1) % images.length;
-                const item = images[current];
-                bannerImg.src = item.url;
-                title.textContent = item.title;
-                tag.textContent = item.tag;
-
-                createSlices();
-                setTimeout(animateSlices, 50);
-            }
-
-            createSlices();
-            animateSlices();
-            setInterval(changeSlide, 8000);
-        </script>
 
 
 
@@ -326,74 +115,116 @@ upgrades.
 
       
         <!-- INTRO SECTION -->
-        <!-- <section class="rms-intro">
+        <section class="rms-intro">
             <div class="intro-container">
                 <div class="intro-image">
                     <img src="assets/img/banner1.png" alt="Reactor Maintenance">
                 </div>
                 <div class="intro-text">
-                    <h2>Why Reactor Maintenance Matters</h2>
-                    <p>Regular maintenance of reactor systems is critical for operational efficiency, process safety,
-                        and compliance with industry standards. Proper servicing prevents downtime, extends equipment
-                        life, and ensures consistent product quality.</p>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- SERVICES / KEY OFFERINGS -->
-        <section class="rms-services">
-            <h2>What We Offer </h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <img src="assets/img/banner1.png" alt="Preventive Maintenance">
-                    <h4>Preventive & Breakdown Maintenance </h4>
-                    <p>Scheduled inspections and proactive servicing to minimize downtime, prevent failures, and 
-extend reactor life. </p>
-                </div>
-                <div class="service-card">
-                    <img src="assets/img/banner1.png" alt="Corrective Repairs">
-                    <h4>Installation, Commissioning & Start-Up Support</h4>
-                    <p>Precision installation and commissioning services ensuring safe start-up, process accuracy, 
-and compliance with industry standards.</p>
-                </div>
-                <div class="service-card">
-                    <img src="assets/img/banner1.png" alt="Calibration & Testing">
-                    <h4>Mechanical, Electrical & Instrumentation Support </h4>
-                    <p>Comprehensive servicing of agitators, seals, nozzles, jackets, drives, sensors, and control 
-systems.</p>
-                </div>
-                <div class="service-card">
-                    <img src="assets/img/banner1.png" alt="Lifecycle Support">
-                    <h4>Glass-Lined Reactor Services & Reglassing Support </h4>
-                    <p>Inspection, repair coordination, and reglassing solutions to restore corrosion resistance and 
-vessel integrity. </p>
-                </div>
-
-
-                <div class="service-card">
-                    <img src="assets/img/banner1.png" alt="Lifecycle Support">
-                    <h4>Performance Optimization & Retrofits  </h4>
-                    <p>Upgrades and modifications to improve efficiency, safety, heat transfer, and process output.  </p>
-                </div>
-
-
-                <div class="service-card">
-                    <img src="assets/img/banner1.png" alt="Lifecycle Support">
-                    <h4>Safety Audits & Compliance Checks </h4>
-                    <p>Detailed assessments aligned with industrial safety norms, pressure vessel regulations, and 
-GMP requirements.  </p>
-                </div>
-
-                  <div class="service-card">
-                    <img src="assets/img/banner1.png" alt="Lifecycle Support">
-                    <h4>Emergency & On-Site Support</h4>
-                    <p>Rapid-response service teams for critical breakdowns and shutdown support.  </p>
+                    <h2>Industries We Serve </h2>
+                    <p>At Reactor Care, we deliver specialized reactor services across multiple industries, supporting 
+a wide range of reactor technologies including glass-lined, stainless steel, high-pressure, alloy, 
+bioreactors, jacketed, single-use, and continuous flow reactors.  </p>
                 </div>
             </div>
         </section>
 
+        <!-- SERVICES / KEY OFFERINGS -->
+        <section class="rms-services">
+         
+            <div class="service-grid">
+                <div class="service-card">
+                    <img src="assets/img/banner1.png" alt="Preventive Maintenance">
+                    <h4>Pharmaceutical & API Manufacturing</h4>
+                    <p>We support pharmaceutical and API manufacturers with reliable services for glass-lined, 
+stainless steel, bioreactors, and continuous flow reactors, ensuring GMP compliance, process 
+precision, and consistent output. </p>
+                </div>
+                <div class="service-card">
+                    <img src="assets/img/banner1.png" alt="Corrective Repairs">
+                    <h4>Chemical & Specialty Chemical Industries</h4>
+                    <p>Our expertise covers corrosive and high-temperature processes using glass-lined, Hastelloy, 
+jacketed, and continuous flow reactors, helping chemical manufacturers maintain safe and 
+efficient operations.</p>
+                </div>
+                <div class="service-card">
+                    <img src="assets/img/banner1.png" alt="Calibration & Testing">
+                    <h4>Biotechnology & Life Sciences </h4>
+                    <p>We serve biotech and life-science facilities with expert support for bioreactors, fermenters, and 
+single-use reactors, enabling contamination-free production and smooth scale-up</p>
+                </div>
+                <div class="service-card">
+                    <img src="assets/img/banner1.png" alt="Lifecycle Support">
+                    <h4>Petrochemical & Refining</h4>
+                    <p>Reactor Care provides services for high-pressure reactors and autoclaves used in 
+petrochemical processing, hydrogenation, and polymer reactions, with a strong focus on safety 
+and reliability.</p>
+                </div>
+
+
+                 <div class="service-card">
+                    <img src="assets/img/banner1.png" alt="Lifecycle Support">
+                    <h4>Agrochemical & Fertilizer Industries</h4>
+                    <p>We support agrochemical plants using specialized reactors designed to handle aggressive 
+chemicals and demanding operating conditions, ensuring long-term performance and 
+compliance.</p>
+                </div>
+
+                 <div class="service-card">
+                    <img src="assets/img/banner1.png" alt="Lifecycle Support">
+                    <h4>Food, Nutraceutical & Beverage Processing</h4>
+                    <p>Our services extend to hygienic reactor systems used in nutraceuticals, flavors, and specialty 
+food production, ensuring material compatibility and process consistency.</p>
+                </div>
+
+
+                 <div class="service-card">
+                    <img src="assets/img/banner1.png" alt="Lifecycle Support">
+                    <h4>Paints & Coatings Industry</h4>
+                    <p>We serve paint and coating manufacturers by maintaining jacketed, stainless steel, and 
+high-pressure reactors used in pigment dispersion, resin preparation, and blending processes, 
+ensuring uniform quality and efficient production. </p>
+                </div>
+
+                 <div class="service-card">
+                    <img src="assets/img/banner1.png" alt="Lifecycle Support">
+                    <h4>Brewery & Fermentation Industry </h4>
+                    <p>Reactor Care supports breweries and fermentation facilities with services for stainless steel 
+reactors, fermenters, and bioreactors, ensuring hygienic operations, temperature control, and 
+consistent batch quality.</p>
+                </div>
+
+
+
+                 <div class="service-card">
+                    <img src="assets/img/banner1.png" alt="Lifecycle Support">
+                    <h4>Polymers, Resins & Elastomers</h4>
+                    <p>We support polymer and resin manufacturers using jacketed and high-pressure reactors, 
+helping achieve stable reactions, improved yields, and reduced downtime.</p>
+                </div>
+
+                 <div class="service-card">
+                    <img src="assets/img/banner1.png" alt="Lifecycle Support">
+                    <h4>Fine Chemicals & Intermediates </h4>
+                    <p>We work with fine chemical and intermediate manufacturers servicing glass-lined, alloy, and 
+continuous flow reactors to support precision chemistry and scalable manufacturing.</p>
+                </div>
+
+
+                  <div class="service-card">
+                    <img src="assets/img/banner1.png" alt="Lifecycle Support">
+                    <h4>Research, Pilot Plants & Industrial R&D</h4>
+                    <p>Reactor Care partners with R&D centers and pilot plants, supporting single-use, high-pressure, 
+and continuous flow reactors to enable innovation and smooth process development.</p>
+                </div>
+
+
+
+            </div>
+        </section>
+
         <!-- TECHNICAL INSPECTION / SAFETY -->
-        <section class="rms-technical">
+        <!-- <section class="rms-technical">
             <div class="tech-container">
                 <div class="tech-text">
                     <h2>Technical Inspection & Safety</h2>
@@ -405,19 +236,13 @@ GMP requirements.  </p>
                     <img src="assets/img/banner1.png" alt="Technical Inspection">
                 </div>
             </div>
-        </section>
+        </section> -->
   <!-- HERO SECTION -->
-        <section class="rms-hero">
-            <div class="hero-overlay">
-                <h1>Reactor Maintenance & Servicing</h1>
-                <p>Comprehensive maintenance solutions ensuring peak performance, safety, and reliability for all
-                    reactor systems.</p>
-            </div>
-        </section>
+     
 
         <!-- CALL TO ACTION -->
         <section class="rms-cta">
-            <h2>Ensure Your Reactors Operate at Peak Performance</h2>
+            <h2>Industries We Serve </h2>
             <p>Contact Reactor Care for expert maintenance and servicing solutions tailored to your reactor systems.</p>
             <a href="contact.html">Schedule Maintenance</a>
         </section>
