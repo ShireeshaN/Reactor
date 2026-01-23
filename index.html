@@ -629,226 +629,6 @@ setInterval(() => {
 
 
 
-<!-- product start -->
-<section class="herocobs-unique-section">
-
-  <!-- Background -->
-  <div class="herocobs-unique-bg"></div>
-
-  <!-- Center Text -->
-  <div class="herocobs-unique-text">REACTOR</div>
-
-  <!-- Thumbnails -->
-  <div class="herocobs-unique-side">
-    <img src="assets/img/banners/1.png" data-img="assets/img/banners/1.png" data-text="GLASS LINED" data-index="1">
-    <img src="assets/img/banners/2.png" data-img="assets/img/banners/2.png" data-text="PHARMA" data-index="2">
-    <img src="assets/img/banners/3.png" data-img="assets/img/banners/3.png" data-text="INDUSTRIAL" data-index="3">
-    <img src="assets/img/banners/4.png" data-img="assets/img/banners/4.png" data-text="CUSTOM" data-index="4">
-  </div>
-
-  <!-- Index -->
-  <div class="herocobs-unique-index">01</div>
-
-</section>
-
-<style>
-/* ================= BASE ================= */
-.herocobs-unique-section{
-  position:relative;
-  width:100%;
-  height:100vh;
-  overflow:hidden;
-  background:#000;
-  font-family:Poppins,sans-serif;
-}
-
-/* Background image */
-.herocobs-unique-bg{
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
-  transition:opacity .8s ease;
-}
-
-/* 🔥 RIGHT SIDE BLACK GLASS OVERLAY */
-.herocobs-unique-bg::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    90deg,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0.35) 55%,
-    rgba(0,0,0,0.75) 100%
-  );
-  backdrop-filter: blur(4px);
-}
-
-/* Center text */
-.herocobs-unique-text{
-  position:absolute;
-  top:45%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  font-size:80px;
-  font-weight:300;
-  letter-spacing:6px;
-  color:rgba(255,255,255,.75);
-  z-index:5;
-  transition:all .6s ease;
-  text-shadow:0 10px 40px rgba(0,0,0,.6);
-}
-
-/* Thumbnails */
-.herocobs-unique-side{
-  position:absolute;
-  top:50%;
-  left:30px;
-  transform:translateY(-50%);
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-  z-index:6;
-}
-
-.herocobs-unique-side img{
-  width:80px;
-  opacity:.5;
-  cursor:pointer;
-  transition:all .3s ease;
-}
-
-.herocobs-unique-side img.active,
-.herocobs-unique-side img:hover{
-  opacity:1;
-  transform:scale(1.15);
-}
-
-/* Index */
-.herocobs-unique-index{
-  position:absolute;
-  bottom:50px;
-  left:50px;
-  font-size:50px;
-  color:rgba(255,255,255,.5);
-  z-index:6;
-}
-
-/* ================= MOBILE (4:5 + GLASS) ================= */
-@media(max-width:768px){
-
-  .herocobs-unique-section{
-    height:auto;
-    aspect-ratio:4/5;
-    min-height:520px;
-  }
-
-  .herocobs-unique-bg{
-    background-position:center top;
-  }
-
-  /* Softer overlay on mobile */
-  .herocobs-unique-bg::after{
-    background:linear-gradient(
-      180deg,
-      rgba(0,0,0,.15) 0%,
-      rgba(0,0,0,.65) 100%
-    );
-  }
-
-  .herocobs-unique-text{
-    font-size:46px;
-    top:50%;
-  }
-
-  .herocobs-unique-side{
-    top:20px;
-    left:50%;
-    transform:translateX(-50%);
-    flex-direction:row;
-  }
-
-  .herocobs-unique-side img{
-    width:60px;
-    height:60px;
-    object-fit:cover;
-    border-radius:50%;
-    border:2px solid rgba(255,255,255,.5);
-    background:#000;
-  }
-
-  .herocobs-unique-index{
-    left:50%;
-    transform:translateX(-50%);
-    bottom:20px;
-    font-size:28px;
-  }
-}
-</style>
-
-<script>
-(function(){
-  const section = document.querySelector('.herocobs-unique-section');
-  const thumbs = section.querySelectorAll('.herocobs-unique-side img');
-  const bg = section.querySelector('.herocobs-unique-bg');
-  const text = section.querySelector('.herocobs-unique-text');
-  const indexBox = section.querySelector('.herocobs-unique-index');
-
-  let current = 0;
-  let timer;
-
-  /* Mobile image swap */
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    const mobileImages = [
-      "assets/img/banners/mobile/1.png",
-      "assets/img/banners/mobile/2.png",
-      "assets/img/banners/mobile/3.png",
-      "assets/img/banners/mobile/4.png"
-    ];
-    thumbs.forEach((t,i)=>{
-      t.src = mobileImages[i];
-      t.dataset.img = mobileImages[i];
-    });
-  }
-
-  function show(i){
-    const t = thumbs[i];
-    bg.style.opacity = 0;
-    text.style.opacity = 0;
-
-    setTimeout(()=>{
-      bg.style.backgroundImage = `url('${t.dataset.img}')`;
-      text.textContent = t.dataset.text;
-      indexBox.textContent = String(t.dataset.index).padStart(2,"0");
-      bg.style.opacity = 1;
-      text.style.opacity = 1;
-    },300);
-
-    thumbs.forEach(x=>x.classList.remove("active"));
-    t.classList.add("active");
-    current = i;
-  }
-
-  function auto(){
-    timer = setInterval(()=>{
-      show((current+1)%4);
-    },5000);
-  }
-
-  thumbs.forEach((t,i)=>{
-    t.addEventListener("mouseenter",()=>{clearInterval(timer);show(i);});
-    t.addEventListener("touchstart",()=>{clearInterval(timer);show(i);});
-    t.addEventListener("mouseleave",auto);
-  });
-
-  show(0);
-  auto();
-})();
-</script>
-
-
-<!-- product end -->
 
 
 
@@ -864,7 +644,7 @@ setInterval(() => {
       <a href="#" class="go-btn">GO</a>
     </div>
     <div class="service-image right-overlay">
-      <img src="assets/img/reactors/glass-lined.jpg" alt="">
+      <img src="assets/img/indexservices/Glass-Lined Reactors.png" alt="">
     </div>
   </div>
 
@@ -876,7 +656,7 @@ setInterval(() => {
       <a href="#" class="go-btn">GO</a>
     </div>
     <div class="service-image left-overlay">
-      <img src="assets/img/reactors/ss-reactor.jpg" alt="">
+      <img src="assets/img/indexservices/Stainless Steel Reactors.png" alt="">
     </div>
   </div>
 
@@ -888,7 +668,7 @@ setInterval(() => {
       <a href="#" class="go-btn">GO</a>
     </div>
     <div class="service-image right-overlay">
-      <img src="assets/img/reactors/autoclave.jpg" alt="">
+      <img src="assets/img/indexservices/High-Pressure Reactors (Autoclaves).png" alt="">
     </div>
   </div>
 
@@ -900,7 +680,7 @@ setInterval(() => {
       <a href="#" class="go-btn">GO</a>
     </div>
     <div class="service-image left-overlay">
-      <img src="assets/img/reactors/hastelloy.jpg" alt="">
+      <img src="assets/img/indexservices/Hastelloy® Reactors.png" alt="">
     </div>
   </div>
 
@@ -912,7 +692,7 @@ setInterval(() => {
       <a href="#" class="go-btn">GO</a>
     </div>
     <div class="service-image right-overlay">
-      <img src="assets/img/reactors/bioreactor.jpg" alt="">
+      <img src="assets/img/indexservices/Bioreactors _ Fermenters.png" alt="">
     </div>
   </div>
 
@@ -924,7 +704,7 @@ setInterval(() => {
       <a href="#" class="go-btn">GO</a>
     </div>
     <div class="service-image left-overlay">
-      <img src="assets/img/reactors/jacketed.jpg" alt="">
+      <img src="assets/img/indexservices/Jacketed Reactor.png" alt="">
     </div>
   </div>
 
@@ -936,7 +716,7 @@ setInterval(() => {
       <a href="#" class="go-btn">GO</a>
     </div>
     <div class="service-image right-overlay">
-      <img src="assets/img/reactors/single-use.jpg" alt="">
+      <img src="assets/img/indexservices/Single-Use Reactors.png" alt="">
     </div>
   </div>
 
@@ -948,7 +728,7 @@ setInterval(() => {
       <a href="#" class="go-btn">GO</a>
     </div>
     <div class="service-image left-overlay">
-      <img src="assets/img/reactors/flow.jpg" alt="">
+      <img src="assets/img/indexservices/Continuous Flow Reactors.png" alt="">
     </div>
   </div>
 
@@ -960,7 +740,7 @@ setInterval(() => {
       <a href="#" class="go-btn">GO</a>
     </div>
     <div class="service-image right-overlay">
-      <img src="assets/img/reactors/maintenance.jpg" alt="">
+      <img src="assets/img/indexservices/Reactor Maintenance & Servicing.png" alt="">
     </div>
   </div>
 
@@ -972,7 +752,7 @@ setInterval(() => {
       <a href="#" class="go-btn">GO</a>
     </div>
     <div class="service-image left-overlay">
-      <img src="assets/img/reactors/buyback.jpg" alt="">
+      <img src="assets/img/indexservices/reactor buy-back program.png" alt="">
     </div>
   </div>
 </section>
