@@ -103,22 +103,21 @@
 
     <!-- LEFT SIDE : PRODUCT NAMES -->
     <div class="product-list">
-      <div class="product-name active" onclick="showProduct(0)">Product 01</div>
-      <div class="product-name" onclick="showProduct(1)">Product 02</div>
-      <div class="product-name" onclick="showProduct(2)">Product 03</div>
-      <div class="product-name" onclick="showProduct(3)">Product 04</div>
-      <div class="product-name" onclick="showProduct(4)">Product 05</div>
-       <div class="product-name" onclick="showProduct(5)">Product 01</div>
-      <div class="product-name" onclick="showProduct(6)">Product 02</div>
-      <div class="product-name" onclick="showProduct(7)">Product 03</div>
-      <div class="product-name" onclick="showProduct(8)">Product 04</div>
-      <div class="product-name" onclick="showProduct(9)">Product 05</div>
-       <div class="product-name" onclick="showProduct(10)">Product 01</div>
-      <div class="product-name" onclick="showProduct(11)">Product 02</div>
-      <div class="product-name" onclick="showProduct(12)">Product 03</div>
-      <div class="product-name" onclick="showProduct(13)">Product 04</div>
-      <div class="product-name" onclick="showProduct(14)">Product 05</div>
-      <!-- ilaa 15 varaku continue cheyyachu -->
+      <div class="product-name active" onclick="showProduct(0)">Flush Bottom Valves</div>
+      <div class="product-name" onclick="showProduct(1)">Thermowell</div>
+      <div class="product-name" onclick="showProduct(2)">Agitators</div>
+      <div class="product-name" onclick="showProduct(3)">Gaskets</div>
+      <div class="product-name" onclick="showProduct(4)">Jackets</div>
+      <div class="product-name" onclick="showProduct(5)">Vessel Shell Heads</div>
+      <div class="product-name" onclick="showProduct(6)">Mechanical Seals</div>
+      <div class="product-name" onclick="showProduct(7)">Baffles</div>
+      <div class="product-name" onclick="showProduct(8)">Bottom Flush Valves</div>
+      <div class="product-name" onclick="showProduct(9)">Manway</div>
+      <div class="product-name" onclick="showProduct(10)">Sampling Valve</div>
+      <div class="product-name" onclick="showProduct(11)">Vent Filter</div>
+      <div class="product-name" onclick="showProduct(12)">Level Gauge</div>
+      <div class="product-name" onclick="showProduct(13)">Breather Valve</div>
+      <div class="product-name" onclick="showProduct(14)">Dike Bund Valve</div>
     </div>
 
     <!-- RIGHT SIDE : PRODUCT IMAGES -->
@@ -127,15 +126,13 @@
       <!-- PRODUCT 1 -->
       <div class="product-images active">
         <div class="image-grid">
-          <img src="assets/img/banners/1.png">
-          <img src="assets/img/banners/1.png">
-          <img src="img/p1-3.jpg">
-          <img src="img/p1-4.jpg">
-          <img src="img/p1-5.jpg">
-          <img src="img/p1-6.jpg">
-          <img src="img/p1-7.jpg">
-          <img src="img/p1-8.jpg">
-          <img src="img/p1-9.jpg">
+          <img src="assets/img/products/flush bottom valves1.png">
+          <img src="assets/img/products/flush bottom valves2.png">
+          <img src="assets/img/products/flush bottom valves3.png">
+          <img src="assets/img/products/flush bottom valves4.png">
+          <img src="assets/img/products/flush bottom valves5.png">
+          <img src="assets/img/products/flush bottom valves6.png">
+    >
         </div>
       </div>
 
@@ -148,12 +145,11 @@
           <img src="img/p2-4.jpg">
           <img src="img/p2-5.jpg">
           <img src="img/p2-6.jpg">
-          <img src="img/p2-7.jpg">
-          <img src="img/p2-8.jpg">
-          <img src="img/p2-9.jpg">
+       
         </div>
       </div>
-       <!-- PRODUCT 2 -->
+
+
       <div class="product-images">
         <div class="image-grid">
           <img src="img/p2-1.jpg">
@@ -162,15 +158,37 @@
           <img src="img/p2-4.jpg">
           <img src="img/p2-5.jpg">
           <img src="img/p2-6.jpg">
-          <img src="img/p2-7.jpg">
-          <img src="img/p2-8.jpg">
-          <img src="img/p2-9.jpg">
         </div>
       </div>
 
+
+      <div class="product-images">
+        <div class="image-grid">
+          <img src="img/p2-1.jpg">
+          <img src="img/p2-2.jpg">
+          <img src="img/p2-3.jpg">
+          <img src="img/p2-4.jpg">
+          <img src="img/p2-5.jpg">
+          <img src="img/p2-6.jpg">
+        </div>
+      </div>
+
+      <div class="product-images">
+        <div class="image-grid">
+          <img src="img/p2-1.jpg">
+          <img src="img/p2-2.jpg">
+          <img src="img/p2-3.jpg">
+          <img src="img/p2-4.jpg">
+          <img src="img/p2-5.jpg">
+          <img src="img/p2-6.jpg">
+        </div>
+      </div>
+
+      <!-- continue remaining product-images till index 14 -->
     </div>
   </div>
 </section>
+
 
 <style>
     .productss {
@@ -226,9 +244,12 @@
 
 .image-grid img {
   width: 100%;
-  border-radius: 10px;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
+  border-radius: 10px;
+  background: #111;
 }
+
 
 /* MOBILE VIEW */
 @media (max-width: 768px) {
@@ -251,14 +272,31 @@
     gap: 12px;
     scroll-snap-type: x mandatory;
   }
-
-  .image-grid img {
-    min-width: 80%;
-    scroll-snap-align: center;
+ .image-grid img {
+    min-width: 75%;
+    aspect-ratio: 4 / 5;
   }
 }
 
 </style>
+
+<script>
+  function showProduct(index) {
+    // LEFT SIDE ACTIVE STATE
+    const productNames = document.querySelectorAll('.product-name');
+    productNames.forEach(name => name.classList.remove('active'));
+    productNames[index].classList.add('active');
+
+    // RIGHT SIDE IMAGE SWITCH
+    const productImages = document.querySelectorAll('.product-images');
+    productImages.forEach(img => img.classList.remove('active'));
+
+    if (productImages[index]) {
+      productImages[index].classList.add('active');
+    }
+  }
+</script>
+
 
 
 
