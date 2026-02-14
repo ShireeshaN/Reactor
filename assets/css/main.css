@@ -209,6 +209,11 @@ h6 {
     background: transparent;
   }
 
+   #navmenu,
+  .mobile-nav-toggle {
+    display: none !important;
+  }
+
   /* ❌ pointer-events REMOVE */
   .desktop-header {
     position: relative;
@@ -372,11 +377,11 @@ h6 {
   }
 
   /* ===== HIDE MOBILE NAV ===== */
-  #navmenu,
+  /* #navmenu,
   .mobile-nav-toggle {
     display: none !important;
-  }
-}
+  } */
+
 
 
 /* ===== SOCIAL MEDIA – TOP LEFT (CONTACT OPPOSITE) ===== */
@@ -527,6 +532,23 @@ h6 {
   right: 0;
   background-color: var(--nav-mobile-background-color);
   transition: 0.3s;
+}
+@media (max-width: 1199px) {
+
+  .desktop-header {
+    display: none !important;
+  }
+
+  #navmenu {
+    display: block !important;
+    z-index: 9999;
+  }
+
+  .mobile-nav-toggle {
+    display: block !important;
+    z-index: 10000;
+    color: #000; /* or white based on banner */
+  }
 }
 
 
