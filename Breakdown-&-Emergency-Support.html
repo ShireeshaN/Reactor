@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - MinimalFolio Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="index-page">
+
+
+  <header id="header" class="header d-flex align-items-center ">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img class="logoos" src="assets/img/logos1.png" alt="">
+        <!-- <h1 class="sitename text-white">ARTIEA</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+           <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+             <li><a href="glass-lined-reactor.html">Glass-Lined Reactors</a></li>
+  <li><a href="stainless-steel-reactor.html">Stainless Steel Reactors</a></li>
+  <li><a href="high-pressure-reactor.html">High-Pressure Reactors (Autoclaves)</a></li>
+  <li><a href="hastelloy-reactor.html">Hastelloy® Reactors</a></li>
+  <li><a href="biocreator-fermenters.html">Bioreactors / Fermenters</a></li>
+  <li><a href="jacketed-reactor-vessels.html">Jacketed Reactor Vessels</a></li>
+   <li><a href="single-use-reactor.html">Single-Use Reactors</a></li>
+  <li><a href="continuous-flow-reactor.html">Continuous Flow Reactors</a></li>
+  <li><a href="reactor-maintenance.html">Reactor Maintenance &amp; Servicing</a></li>
+  <li><a href="reactor-buy-back-program.html">Reactor Buy-Back Program</a></li>
+
+            </ul>
+          </li>
+         
+            
+          <li><a href="contact.html"  class="active">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+
+   <style>
+    :root {
+      --text-color: #111;
+      --gray-bg: #f3f6f8;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #fff;
+    }
+
+    section { width: 100%; margin: 0; padding: 0; }
+
+    .container-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* -------- LEFT COLUMN -------- */
+    .left-col {
+      flex: 0 0 38%;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      padding: 100px 80px 100px 120px;
+    }
+
+    .left-col h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .left-col p {
+      font-size: 1.05rem;
+      color: #333;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .left-col a {
+      color: #111;
+      text-decoration: underline;
+    }
+
+    .left-col h2 {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-top: 60px;
+      margin-bottom: 10px;
+    }
+
+    /* -------- RIGHT COLUMN -------- */
+    .right-col {
+      flex: 0 0 62%;
+      background-color: var(--gray-bg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px 120px;
+    }
+
+    .right-col h2 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 35px;
+    }
+
+    label {
+      font-weight: 500;
+      margin-bottom: 6px;
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .form-control,
+    .form-select {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #000;
+      border-radius: 0;
+      padding-left: 0;
+      font-size: 1rem;
+      margin-bottom: 25px;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      box-shadow: none;
+      border-color: #000;
+      background: transparent;
+    }
+
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+
+    .form-check input {
+      margin-top: 4px;
+      width: 18px;
+      height: 18px;
+      border-radius: 0;
+    }
+
+    .form-check label a {
+      color: #111;
+      text-decoration: underline;
+    }
+
+    .btn-submit {
+      background-color: #111;
+      color: #fff;
+      border: none;
+      border-radius: 0;
+      padding: 12px 45px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      margin-top: 30px;
+    }
+
+    .btn-submit:hover { background-color: #333; }
+
+    /* -------- MAP SECTION -------- */
+    .map-section {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+   
+      background-color: #fff;
+      align-items: stretch;
+      margin-top: 0;
+    }
+
+    .map-info {
+      flex: 0 0 38%;
+      padding: 100px 80px 100px 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .map-info h2 {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 35px;
+    }
+
+    .map-info p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .map-info a {
+      color: #111;
+      text-decoration: underline;
+    }
+
+    .map {
+      flex: 0 0 62%;
+      min-height: 750px;
+      background: #111;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: grayscale(100%) invert(90%) contrast(90%);
+    }
+
+    /* -------- RESPONSIVE -------- */
+    @media (max-width: 992px) {
+      .container-flex,
+      .map-section {
+        flex-direction: column;
+      }
+
+      .left-col,
+      .right-col,
+      .map-info,
+      .map {
+        flex: 100%;
+        padding: 60px 40px;
+      }
+    }
+  </style>
+
+<main class="main">
+
+<!-- banner start -->
+<section class="reactor-inspection-banner">
+    <div class="reactor-inspection-container">
+        <div class="reactor-inspection-content">
+            <h1>Breakdown & Emergency Support</h1>
+            <p>
+               Unexpected reactor failures can stop production instantly. We provide rapid diagnosis and 
+               restoration to minimize downtime and ensure safe operations.  </p>
+            <a href="#" class="reactor-inspection-btn">Get Consultation</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* ===== Reactor Inspection Banner ===== */
+
+.reactor-inspection-banner {
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)
+    ),
+    url('https://images.unsplash.com/photo-1581091870627-3b5de8a2b5f6?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+}
+
+.reactor-inspection-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.reactor-inspection-content {
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.reactor-inspection-content h1 {
+    font-size: 52px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.reactor-inspection-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #dddddd;
+}
+
+.reactor-inspection-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #00ffff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.reactor-inspection-btn:hover {
+    background: #00ffff;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 992px) {
+    .reactor-inspection-content h1 {
+        font-size: 40px;
+    }
+
+    .reactor-inspection-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .reactor-inspection-banner {
+        min-height: 70vh;
+        padding: 0 5%;
+    }
+
+    .reactor-inspection-content h1 {
+        font-size: 32px;
+    }
+
+    .reactor-inspection-content p {
+        font-size: 15px;
+    }
+
+    .reactor-inspection-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+</style>
+<!-- banner end -->
+
+<section class="bes-section">
+    <div class="bes-container">
+
+        <!-- TOP HEADER -->
+        <div class="bes-header">
+            <h2>Breakdown & Emergency Support</h2>
+            <p>
+                Unexpected failures can instantly disrupt production. 
+                Our rapid-response specialists provide immediate technical 
+                intervention to stabilize, diagnose, and restore reactor systems.
+            </p>
+        </div>
+
+        <div class="bes-content">
+
+            <!-- LEFT GRID -->
+            <div class="bes-grid">
+
+                <div class="bes-card">
+                    <h4>Glass Lining Damage</h4>
+                </div>
+
+                <div class="bes-card">
+                    <h4>Mechanical Seal Failure</h4>
+                </div>
+
+                <div class="bes-card">
+                    <h4>Agitator Shaft Breakage</h4>
+                </div>
+
+                <div class="bes-card">
+                    <h4>Bearing Seizure</h4>
+                </div>
+
+                <div class="bes-card">
+                    <h4>Leakage Issues</h4>
+                </div>
+
+                <div class="bes-card">
+                    <h4>Pressure-Related Failures</h4>
+                </div>
+
+                <div class="bes-card">
+                    <h4>Internal Component Damage</h4>
+                </div>
+
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="bes-image">
+                <img src="https://images.unsplash.com/photo-1581091870627-3b5de8a2b5f6?auto=format&fit=crop&w=900&q=80" alt="Emergency Reactor Support">
+            </div>
+
+        </div>
+
+        <!-- BOTTOM STATEMENT -->
+        <div class="bes-footer">
+            <p>
+                Our team works swiftly to diagnose root causes, isolate affected systems, 
+                and restore safe operational conditions — minimizing downtime and 
+                protecting critical plant assets.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<style>
+    /* ===== Breakdown & Emergency Support ===== */
+
+.bes-section {
+    width: 100%;
+    padding: 110px 8%;
+    background: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.bes-container {
+    max-width: 1350px;
+    margin: auto;
+}
+
+/* HEADER */
+
+.bes-header {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+.bes-header h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.bes-header p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* CONTENT LAYOUT */
+
+.bes-content {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+/* GRID */
+
+.bes-grid {
+    flex: 1.2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.bes-card {
+    background: #f8fbff;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid #38b6ff;
+    transition: 0.3s ease;
+}
+
+.bes-card h4 {
+    font-size: 16px;
+    color: #111;
+}
+
+.bes-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+/* IMAGE */
+
+.bes-image {
+    flex: 1;
+}
+
+.bes-image img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+/* FOOTER STATEMENT */
+
+.bes-footer {
+    margin-top: 70px;
+    text-align: center;
+    background: #f0f8ff;
+    padding: 35px;
+    border-radius: 14px;
+}
+
+.bes-footer p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+    .bes-content {
+        flex-direction: column;
+    }
+
+    .bes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .bes-section {
+        padding: 70px 5%;
+    }
+
+    .bes-header h2 {
+        font-size: 28px;
+    }
+
+    .bes-header p {
+        font-size: 15px;
+    }
+}
+
+</style>
+  </main>
+
+  <!-- FOOTER START -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="assets/img/logos.png" alt="Company Logo">
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <p>
+        <a href="mailto:anasahmedreactorcare@gmail.com">
+          anasahmedreactorcare@gmail.com
+        </a>
+      </p>
+      <p>Hyderabad, Telangana</p>
+      <p>
+        <a href="tel:+919550219901">
+          +91 9550219901
+        </a>
+      </p>
+    </div>
+
+    <!-- Social + Button -->
+    <div class="footer-actions">
+
+      <div class="social-icons">
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V11h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm4.8-2.3a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"/>
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.6h.1a4.2 4.2 0 0 1 3.8-2c4 0 4.7 2.6 4.7 6v6H17v-5.3c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9z"/>
+          </svg>
+        </a>
+      </div>
+
+      <a href="mailto:anasahmedreactorcare@gmail.com" class="contact-btn">
+        Contact Us
+      </a>
+
+    </div>
+  </div>
+</footer>
+
+<style>
+/* Footer Base */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 35px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.footer-logo img {
+  max-width: 140px;
+}
+
+/* Contact */
+.footer-contact {
+  text-align: start;
+  font-size: 14px;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Actions */
+.footer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.social-icons svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover svg {
+  opacity: 0.7;
+}
+
+/* Button */
+.contact-btn {
+  padding: 8px 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.contact-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: start;
+  }
+}
+</style>
+<!-- FOOTER END -->
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+
+
+<!-- Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Intersection Observer for scroll fade-in animation
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+
+</html>
