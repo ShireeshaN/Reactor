@@ -278,7 +278,7 @@ h6 {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 44px;
+    gap: 20px;
   }
 
   .menu-line-2 {
@@ -287,8 +287,8 @@ h6 {
 
   .desktop-menu a {
     color: #fff;
-    font-size: 19px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 600;
     letter-spacing: 2px;
     text-decoration: none;
     position: relative;
