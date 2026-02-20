@@ -325,7 +325,7 @@ h6 {
     top: 36px; /* 🔥 gap reduced */
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(12px);
     min-width: 340px;
     padding: 14px 0;
@@ -407,21 +407,20 @@ h6 {
 
 
 /*--------------------------------------------------------------
-# Navigation Menu
+# Mobile Navigation – Clean Fixed Version
 --------------------------------------------------------------*/
-/* Navmenu */
+
 .mobile-nav-toggle {
-  /* background-color: var(--background-color); */
   padding: 4px;
-  color: black;
+  color: #000;
   position: fixed;
   top: 20px;
   right: 20px;
   font-size: 32px;
   line-height: 0;
   cursor: pointer;
-  display: block !important;
-  z-index: 998;
+  display: none; /* hidden by default */
+  z-index: 10001; /* above header */
   transition: 0.3s;
 }
 
@@ -429,126 +428,89 @@ h6 {
   color: var(--nav-hover-color);
 }
 
-.navmenu {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: -300px;
-  z-index: 997;
-  transition: 0.3s;
-  width: 300px;
-  overflow: hidden;
-}
 
-.navmenu ul {
-  display: block;
-  list-style: none;
-  padding: 10px 0;
-  margin: 0;
-  overflow-y: auto;
-  transition: 0.3s;
-  z-index: 998;
-}
 
-.navmenu a,
-.navmenu a:focus {
-  color: var(--nav-dropdown-color);
-  padding: 10px 20px;
-  font-family: var(--nav-font);
-  font-size: 15px;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  white-space: nowrap;
-  transition: 0.3s;
-}
-
-.navmenu a i,
-.navmenu a:focus i {
-  font-size: 11px;
-  line-height: 0;
-  margin-left: 5px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: 0.3s;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-}
-
-.navmenu a i:hover,
-.navmenu a:focus i:hover {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.navmenu a:hover,
-.navmenu .active,
-.navmenu .active:focus {
-  color: var(--nav-dropdown-hover-color);
-}
-
-.navmenu .active i,
-.navmenu .active:focus i {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  transform: rotate(180deg);
-}
-
-.navmenu .dropdown ul {
-  position: static;
-  display: none;
-  z-index: 99;
-  padding: 10px 0;
-  margin: 10px 20px;
-  box-shadow: none;
-  transition: all 0.5s ease-in-out;
-  overflow-y: scroll;
-}
-
-.navmenu .dropdown>.dropdown-active {
-  display: block;
-  background-color: var(--nav-dropdown-background-color);
-  border: 1px solid color-mix(in srgb, var(--nav-dropdown-color), transparent 90%);
-}
-
-.mobile-nav-active {
-  overflow: hidden;
-}
-
-.mobile-nav-active .mobile-nav-toggle {
-  right: 310px;
-  font-size: 36px;
-}
-
-.mobile-nav-active .navmenu {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background-color: var(--nav-mobile-background-color);
-  transition: 0.3s;
-}
+/* ================= MOBILE ONLY ================= */
 @media (max-width: 1199px) {
 
+  /* Hide Desktop */
   .desktop-header {
     display: none !important;
   }
 
-  #navmenu {
-    display: block !important;
-    z-index: 9999;
+  /* Fix header above banner */
+  .header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
   }
 
+  /* Show Hamburger */
   .mobile-nav-toggle {
     display: block !important;
-    z-index: 10000;
-    color: #000; /* or white based on banner */
   }
+
+  /* Side Menu */
+  .navmenu {
+    position: fixed;
+    top: 0;
+    right: -300px;   /* hidden */
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    z-index: 10002;  /* 🔥 always above header */
+    transition: right 0.35s ease;
+    padding-top: 80px;
+    overflow-y: auto;
+  }
+
+  /* When Active */
+  .mobile-nav-active .navmenu {
+    right: 0;
+  }
+
+  /* Prevent body scroll */
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  /* Menu List */
+  .navmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navmenu li {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .navmenu a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    font-size: 15px;
+    color: #111;
+    text-decoration: none;
+  }
+
+  .navmenu a:hover {
+    background: rgba(0,0,0,0.04);
+  }
+
+  /* Dropdown */
+  .navmenu .dropdown ul {
+    display: none;
+    padding-left: 15px;
+  }
+
+  .navmenu .dropdown-active {
+    display: block !important;
+  }
+
 }
 
 
