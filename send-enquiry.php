@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $company = $_POST['company'];
     $message = $_POST['message'];
 
-    $to = "shireesha@arcotindia.com";
+    $to = "business@reactorcare.com";
     $subject = "New Enquiry Form Submission";
 
     $body = "
@@ -22,7 +22,7 @@ Message:
 $message
     ";
 
-    $headers  = "From: shireesha@arcotindia.com\r\n";
+    $headers  = "From: business@reactorcare.com\r\n";
     $headers .= "Reply-To: $email\r\n";
 
     if (mail($to, $subject, $body, $headers)) {
