@@ -2232,44 +2232,48 @@ document.addEventListener("DOMContentLoaded", function(){
     </script>
 
 
-    <div class="enquiry-wide-wrapper">
-      <div class="enquiry-wide-form">
+<div class="enquiry-wide-wrapper">
+  <div class="enquiry-wide-form">
 
-        <div class="form-title">
-          <h2>Enquiry Form</h2>
-          <p>Fill in the details and our team will contact you</p>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <input type="text" placeholder="Full Name" required>
-          </div>
-
-          <div class="form-group">
-            <input type="email" placeholder="Email Address" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <input type="tel" placeholder="Phone Number" required>
-          </div>
-
-          <div class="form-group">
-            <input type="text" placeholder="Company Name">
-          </div>
-        </div>
-
-        <div class="form-group full-width">
-          <textarea placeholder="Your Message" rows="4"></textarea>
-        </div>
-
-        <div class="form-group full-width">
-          <button type="submit">Submit Enquiry</button>
-        </div>
-
-      </div>
+    <div class="form-title">
+      <h2>Enquiry Form</h2>
+      <p>Fill in the details and our team will contact you</p>
     </div>
+
+    <form action="send-enquiry.php" method="POST">
+
+      <div class="form-row">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Full Name" required>
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="company" placeholder="Company Name">
+        </div>
+      </div>
+
+      <div class="form-group full-width">
+        <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+      </div>
+
+      <div class="form-group full-width">
+        <button type="submit">Submit Enquiry</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
 
     <style>
       .enquiry-wide-wrapper {
