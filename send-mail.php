@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone    = htmlspecialchars($_POST['phone']);
     $location = htmlspecialchars($_POST['location']);
 
-    $to = "business@reactorcare.com"; // your email
+    $to = "shireeshanallamasa@gmail.com"; // your email
     $subject = "New Contact Form Submission - Reactor Care";
 
     $message = "
