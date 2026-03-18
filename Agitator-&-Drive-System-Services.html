@@ -33,22 +33,43 @@
 <body class="index-page">
 
 
-  <header id="header" class="header d-flex align-items-center ">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+<header class="custom-header">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img class="logoos" src="assets/img/logos.png" alt="">
-        <!-- <h1 class="sitename text-white">ARTIEA</h1> -->
-      </a>
+  <div class="topbar">
+    <div class="topbar-container">
 
-      <nav id="navmenu" class="navmenu">
+      <!-- LOGO -->
+      <div class="logo">
+         <a href="index.html">
+        <img src="assets/img/logo.png" alt="Logo" >
+        </a>
+      </div>
+
+      <!-- HAMBURGER -->
+      <div class="mobile-nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- OVERLAY -->
+  <div class="overlay"></div>
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+
+      <li class="dropdown">
+        <a href="#">
+          Services <i class="bi bi-chevron-down"></i>
+        </a>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-           <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-           <ul class="dropdown">
-              <li><a href="Reactor-Inspection-&-Health-Audit.html">Reactor Inspection & Health Audit</a></li>
+           <li><a href="Reactor-Inspection-&-Health-Audit.html">Reactor Inspection & Health Audit</a></li>
               <li><a href="Preventive-&-Predictive-Maintenance.html">Preventive & Predictive Maintenance</a></li>
               <li><a href="Breakdown-&-Emergency-Support.html">Breakdown & Emergency Support</a></li>
               <li><a href="Glass-Lined-Reactor-(GLR)-Services.html">Glass Lined Reactor (GLR) Services</a></li>
@@ -56,21 +77,231 @@
               <li><a href="Agitator-&-Drive-System-Services.html">Agitator & Drive System Services</a></li>
               <li><a href="Reactor-Refurbishment-&-Modernization.html">Reactor Refurbishment & Modernization </a></li>
               <li><a href="Aftermarket-Products-&-Spare-Parts.html">Aftermarket Products & Spare Parts</a></li>
-              <li><a href="Reactor-Buy-Back-&-Asset-Recovery-Program.html">Reactor Buy-Back & Asset Recovery Program
-                </a></li>
-
-
-            </ul>
-          </li>
-         
-            
-          <li><a href="contact.html"  class="active">Contact</a></li>
+              <li><a href="Reactor-Buy-Back-&-Asset-Recovery-Program.html">Reactor Buy-Back & Asset Recovery Program </a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+      </li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="industriesweserve.html">Industry We Serve</a></li>
+      <li><a href="Reactor-Buy-Back-&-Asset-Recovery-Program.html">Reactor Buy-Back & Asset Recovery Program</a>
 
-    </div>
-  </header>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<style>
+
+/* ================= HEADER ================= */
+.custom-header{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:10000;
+}
+
+.topbar{
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:center; /* center container */
+}
+
+.topbar-container{
+  width:100%;
+  max-width:1200px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 40px; /* 👈 perfect spacing */
+}
+
+/* ================= LOGO ================= */
+.logo img{
+  height:50px;
+  display:block;
+  margin-top: 40px;
+}
+
+/* ================= HAMBURGER ================= */
+.mobile-nav-toggle{
+  width:26px;
+  height:18px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  cursor:pointer;
+  z-index:10001;
+}
+
+
+
+/* LINES */
+.mobile-nav-toggle span{
+  height:2px;
+  width:100%;
+  background:#111;
+  border-radius:2px;
+  transition:all 0.3s ease;
+}
+
+/* ANIMATION */
+.menu-active .mobile-nav-toggle span:nth-child(1){
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-active .mobile-nav-toggle span:nth-child(2){
+  opacity:0;
+}
+
+.menu-active .mobile-nav-toggle span:nth-child(3){
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ================= SIDEBAR ================= */
+/* SIDEBAR */
+.sidebar-menu{
+  position:fixed;
+  top:0;
+  right:-320px;
+  width:320px;
+  height:100vh;
+  background:#fff;
+  padding:70px 20px 20px; /* 🔥 reduced top space */
+  transition:0.35s ease;
+  z-index:9999;
+  box-shadow:-10px 0 30px rgba(0,0,0,0.08);
+}
+
+.menu-active .sidebar-menu{
+  right:0;
+}
+
+/* ================= MENU ================= */
+.sidebar-menu ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+/* MENU ITEMS */
+.sidebar-menu ul li{
+  border-bottom:1px solid #eee;
+}
+
+.sidebar-menu ul li a{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 0;   /* 🔥 reduced gap */
+  text-decoration:none;
+  color:#111;
+  font-size:14px;
+  font-weight:500;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown ul{
+  display:none;
+  padding-left:10px;
+}
+
+.dropdown.active ul{
+  display:block;
+}
+
+/* DROPDOWN ITEMS */
+.dropdown ul li a{
+  font-size:13px;
+  padding:2px 0;   /* 🔥 tight spacing */
+  color:#555;
+}
+
+/* ================= OVERLAY ================= */
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.35);
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s;
+  z-index:9998;
+}
+
+.menu-active .overlay{
+  opacity:1;
+  visibility:visible;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:992px){
+  .topbar-container{
+    padding:0 25px;
+  }
+}
+
+@media(max-width:576px){
+  .topbar-container{
+    padding:0 18px;
+  }
+}
+
+
+/* ===== FORCE FIX (MAIN.CSS override) ===== */
+.mobile-nav-toggle{
+  display:flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+
+.mobile-nav-toggle span{
+  display:block !important;
+}
+
+/* fix parent conflicts */
+.topbar,
+.topbar-container{
+  display:flex !important;
+}
+
+
+.mobile-nav-toggle{
+  position:relative;
+  z-index:10002;
+}
+
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const toggle = document.querySelector(".mobile-nav-toggle");
+  const overlay = document.querySelector(".overlay");
+  const dropdown = document.querySelector(".dropdown");
+
+  // MENU TOGGLE
+  toggle.addEventListener("click", function(){
+    document.body.classList.toggle("menu-active");
+  });
+
+  // OVERLAY CLICK
+  overlay.addEventListener("click", function(){
+    document.body.classList.remove("menu-active");
+  });
+
+  // DROPDOWN
+  if(dropdown){
+    dropdown.addEventListener("click", function(){
+      this.classList.toggle("active");
+    });
+  }
+
+});
+</script>
 
 
    <style>

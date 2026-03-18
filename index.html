@@ -92,8 +92,7 @@
               <li><a href="Agitator-&-Drive-System-Services.html">Agitator & Drive System Services</a></li>
               <li><a href="Reactor-Refurbishment-&-Modernization.html">Reactor Refurbishment & Modernization </a></li>
               <li><a href="Aftermarket-Products-&-Spare-Parts.html">Aftermarket Products & Spare Parts</a></li>
-              <li><a href="Reactor-Buy-Back-&-Asset-Recovery-Program.html">Reactor Buy-Back & Asset Recovery Program
-                </a></li>
+              <li><a href="Reactor-Buy-Back-&-Asset-Recovery-Program.html">Reactor Buy-Back & Asset Recovery Program </a></li>
 
 
             </ul>
@@ -141,13 +140,6 @@
   </nav>
 
 </header>
-
-
-
-
-
-
-
 
 
   <style>
@@ -275,15 +267,30 @@ INDEX PAGE HEADER (WHITE BAR)
       }
     </style>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const btn = document.querySelector(".mobile-nav-toggle");
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-        btn.addEventListener("click", function () {
-          document.body.classList.toggle("mobile-nav-active");
-        });
-      });
-    </script>
+  const toggle = document.querySelector(".mobile-nav-toggle");
+  const overlay = document.querySelector(".mobile-overlay");
+
+  toggle.addEventListener("click", function () {
+    document.body.classList.toggle("mobile-nav-active");
+
+    // TOGGLE ICON
+    this.classList.toggle("bi-list");
+    this.classList.toggle("bi-x");
+  });
+
+  overlay.addEventListener("click", function () {
+    document.body.classList.remove("mobile-nav-active");
+
+    // RESET ICON BACK TO HAMBURGER
+    toggle.classList.remove("bi-x");
+    toggle.classList.add("bi-list");
+  });
+
+});
+</script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function(){
